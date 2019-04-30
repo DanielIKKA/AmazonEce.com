@@ -9,6 +9,12 @@
         <label for="email">Votre adresse mail </label><input type="email" name="email" id="email"><br/>
         <label for="password">Votre mot de passe </label><input type="password" name="password" id="password"><br/>
         <label for="password_confirm">Confirmez le mot de passe </label><input type="password" name="password_confirm" id="password_confirm"><br/>
+
+        <p></p>
+        <input type="hidden" name="MAX_FILE_SIZE" value="50000000">
+        Ajoutez une photo de profil <input type="file" name="pic1">
+        Photo 2 : <input type="file" name="pic2">
+
         <p><br/><input type="submit" value="S'inscrire"/></p>
     </form>
 </div>
