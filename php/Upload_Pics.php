@@ -28,7 +28,7 @@
 
                 if(in_array($extension, $extensions)) //Si l'extension est dans le tableau
                 {
-                    $dossier = "C:\wamp64\www\AmazonECE\Assets\BDD_Images/";
+                    $dossier = "C:\wamp64\www\AmazonEce.com\Assets\BDD_Images/";
 
                     //Formatage du nom du fichier
                     $fichier = $id_last_order . "_" . $i.$extension;

@@ -1,5 +1,5 @@
 <div class="inscription">
-    <form method="post" action="traitement_inscription.php">
+    <form method="post" action="traitement_inscription.php" enctype="multipart/form-data">
         Désirez vous créer un compte vendeur ou acheteur<br />
         <input type="radio" name="type" value="seller" id="seller" /> <label for="seller">Vendeur</label><br />
         <input type="radio" name="type" value="buyer" id="buyer" /> <label for="buyer">Acheteur</label><br />
@@ -10,10 +10,15 @@
         <label for="password">Votre mot de passe </label><input type="password" name="password" id="password"><br/>
         <label for="password_confirm">Confirmez le mot de passe </label><input type="password" name="password_confirm" id="password_confirm"><br/>
 
-        <p></p>
         <input type="hidden" name="MAX_FILE_SIZE" value="50000000">
-        Ajoutez une photo de profil <input type="file" name="pic1">
-        Photo 2 : <input type="file" name="pic2">
+        Ajoutez une photo de profil : <input type="file" name="photo"><br/>
+
+        Si vous le désirez, choisissez un thème pour personnaliser votre navigation <br/>
+        <input type="radio" name="background" value="wood" id="wood"/> <label for="wood">Parquet</label><br/>
+        <input type="radio" name="background" value="wall" id="wall"/> <label for="wall">Briques</label><br/>
+        <input type="radio" name="background" value="leather" id="leather"/> <label for="leather">Cuir</label><br/>
+        <input type="radio" name="background" value="none" id="none"/> <label for="none">Aucun</label><br/>
+
 
         <p><br/><input type="submit" value="S'inscrire"/></p>
     </form>
