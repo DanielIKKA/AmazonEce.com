@@ -5,7 +5,7 @@
 - https://www.phpmyadmin.net
 -
 - Hôte : 127.0.0.1:3306
-- Généré le :  mar. 30 avr. 2019 à 13:30
+- Généré le :  mar. 30 avr. 2019 à 15:26
 - Version du serveur :  5.7.24
 - Version de PHP :  7.2.14
 -->
@@ -20,7 +20,7 @@
                 CREATE TABLE `item` (
                   `id` int(10) NOT NULL AUTO_INCREMENT,
                   `seller_email` varchar(30) NOT NULL,
-                  `name` varchar(20) NOT NULL,
+                  `name` varchar(50) NOT NULL,
                   `pic1` varchar(20) DEFAULT NULL,
                   `pic2` varchar(20) DEFAULT NULL,
                   `pic3` varchar(20) DEFAULT NULL,
@@ -29,10 +29,10 @@
                   `price` float NOT NULL,
                   `gender` set('Masculin','Feminin') DEFAULT NULL,
                   `size` varchar(10) DEFAULT NULL,
-                  `author` varchar(20) DEFAULT NULL,
+                  `author` varchar(50) DEFAULT NULL,
                   `category` set('Livres','Musique','Vetements','Sports et Loisirs') NOT NULL,
                   PRIMARY KEY (`id`)
-                ) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+                ) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
             </pma:table>
         </pma:database>
     </pma:structure_schemas>
@@ -42,5 +42,200 @@
     -->
     <database name="amazonece">
         <!-- Table item -->
+        <table name="item">
+            <column name="id">26</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Tous les tubes de la fete</column>
+            <column name="pic1">26_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Une compilation de titres endiables</column>
+            <column name="video">NULL</column>
+            <column name="price">8</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Musique</column>
+        </table>
+        <table name="item">
+            <column name="id">27</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Chaussettes rayees</column>
+            <column name="pic1">27_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Paire de chaussettes neuves et inodores</column>
+            <column name="video">NULL</column>
+            <column name="price">5</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Vetements</column>
+        </table>
+        <table name="item">
+            <column name="id">28</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Lingerie sexy</column>
+            <column name="pic1">28_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Jolie lingerie en dentelle rouge</column>
+            <column name="video">NULL</column>
+            <column name="price">25</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Vetements</column>
+        </table>
+        <table name="item">
+            <column name="id">29</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Harry Potter</column>
+            <column name="pic1">29_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Premier tome de la saga connue mondialement</column>
+            <column name="video">NULL</column>
+            <column name="price">8</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">JRR Tolkien</column>
+            <column name="category">Livres</column>
+        </table>
+        <table name="item">
+            <column name="id">30</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Le vieil homme et la mer</column>
+            <column name="pic1">30_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Le livre tourmentant qui rejouira toute la famille</column>
+            <column name="video">NULL</column>
+            <column name="price">10</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ernest Hemingway</column>
+            <column name="category">Livres</column>
+        </table>
+        <table name="item">
+            <column name="id">31</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Ca</column>
+            <column name="pic1">31_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Traduit de l'anglais pr Mac Lesgy</column>
+            <column name="video">NULL</column>
+            <column name="price">7</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Stephen King</column>
+            <column name="category">Livres</column>
+        </table>
+        <table name="item">
+            <column name="id">32</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Flute en bois</column>
+            <column name="pic1">32_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Ideale pour apprendre la flute au college</column>
+            <column name="video">NULL</column>
+            <column name="price">17</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Sports et Loisirs</column>
+        </table>
+        <table name="item">
+            <column name="id">33</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Piscine a boule</column>
+            <column name="pic1">33_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Piscine Ã  boule pour jouer pendant des heures sans se faire mal</column>
+            <column name="video">NULL</column>
+            <column name="price">50</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Sports et Loisirs</column>
+        </table>
+        <table name="item">
+            <column name="id">34</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Raquettes de Ping Pong</column>
+            <column name="pic1">34_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Lot de 2 raquettes</column>
+            <column name="video">NULL</column>
+            <column name="price">5</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Sports et Loisirs</column>
+        </table>
+        <table name="item">
+            <column name="id">35</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Platine</column>
+            <column name="pic1">35_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Une platine fonctionelle qui vous rapellera les annees 40</column>
+            <column name="video">NULL</column>
+            <column name="price">30</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Musique</column>
+        </table>
+        <table name="item">
+            <column name="id">36</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Ticket collector</column>
+            <column name="pic1">36_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Ticket en carton du match culte de 2011 </column>
+            <column name="video">NULL</column>
+            <column name="price">100</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Sports et Loisirs</column>
+        </table>
+        <table name="item">
+            <column name="id">37</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Tee Shirt uni</column>
+            <column name="pic1">37_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Tee Shirt simple et efficace</column>
+            <column name="video">NULL</column>
+            <column name="price">15</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Vetements</column>
+        </table>
+        <table name="item">
+            <column name="id">38</column>
+            <column name="seller_email">arnaud@gmail.com</column>
+            <column name="name">Vinyle</column>
+            <column name="pic1">38_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Vinyle d'epoque pour faire chavirer les dames</column>
+            <column name="video">NULL</column>
+            <column name="price">25</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Musique</column>
+        </table>
     </database>
 </pma_xml_export>
