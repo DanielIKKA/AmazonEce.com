@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.4
+- https://www.phpmyadmin.net
+-
+- Hôte : 127.0.0.1:3306
+- Généré le :  mar. 30 avr. 2019 à 13:39
+- Version du serveur :  5.7.24
+- Version de PHP :  7.2.14
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="amazonece" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="order">
+                CREATE TABLE `order` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `buyer_ID` int(10) NOT NULL,
+                  `price` int(10) NOT NULL,
+                  `item_id_list` varchar(100) NOT NULL,
+                  `card_number` int(16) NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de données :  'amazonece'
+    -->
+    <database name="amazonece">
+        <!-- Table order -->
+    </database>
+</pma_xml_export>

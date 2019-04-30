@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.4
+- https://www.phpmyadmin.net
+-
+- Hôte : 127.0.0.1:3306
+- Généré le :  mar. 30 avr. 2019 à 13:40
+- Version du serveur :  5.7.24
+- Version de PHP :  7.2.14
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="amazonece" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="user">
+                CREATE TABLE `user` (
+                  `type` set('admin','seller','buyer','') NOT NULL,
+                  `firstname` varchar(20) NOT NULL,
+                  `surname` varchar(20) NOT NULL,
+                  `adress` varchar(50) NOT NULL,
+                  `email` varchar(30) NOT NULL,
+                  `password` varchar(20) NOT NULL,
+                  `tel` int(10) DEFAULT NULL,
+                  `photo` varchar(20) DEFAULT NULL,
+                  `background` varchar(20) DEFAULT NULL,
+                  PRIMARY KEY (`email`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de données :  'amazonece'
+    -->
+    <database name="amazonece">
+        <!-- Table user -->
+        <table name="user">
+            <column name="type">admin</column>
+            <column name="firstname">Arnaud</column>
+            <column name="surname">Emprin</column>
+            <column name="adress">58 rue paul louis courier</column>
+            <column name="email">arnaud.emprin@gmail.com</column>
+            <column name="password">root</column>
+            <column name="tel">1212</column>
+            <column name="photo">NULL</column>
+            <column name="background">NULL</column>
+        </table>
+    </database>
+</pma_xml_export>
