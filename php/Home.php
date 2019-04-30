@@ -8,6 +8,5 @@
 <body>
     <!-- import the header template -->
     <?php include ("headerTemplate.php") ; ?>
-    <hi> hey </hi>
 </body>
 </html>
