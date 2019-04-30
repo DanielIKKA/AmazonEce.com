@@ -25,13 +25,13 @@
 
                 if(mysqli_query($db_handle, $SQL))
                 {
-                    echo "Ajout à la base de donnée OK";
+                    echo "Ajout à la base de donnée OK<br/>";
                     //upload de la photo
                     if (file_exists($_FILES['photo']['tmp_name']) || is_uploaded_file($_FILES['photo']['tmp_name']))
                     {
                         $extensions = array('.png', '.gif', '.jpg', '.jpeg');
                         $extension = strrchr($_FILES['photo']['name'], '.');
-                        echo "1";
+
 
                         if(in_array($extension, $extensions)) //Si l'extension est dans le tableau
                         {
@@ -39,26 +39,24 @@
 
                             //Formatage du nom du fichier
                             $fichier = $email.$extension;
-                            echo "2";
+
 
 
                             if(move_uploaded_file($_FILES['photo']['tmp_name'], $dossier . $fichier))
                             {
-                                echo "3";
-                                $SQL = ("UPDATE user SET photo=\"" .$fichier. "\" WHERE user.email=".$email);
+
+                                $SQL = ("UPDATE user SET photo=\"" .$fichier. "\" WHERE user.email=\"" .$email. "\"");
                                 if(mysqli_query($db_handle, $SQL))
                                 {
-                                    echo "Upload réussie";
-                                }
-                                else
+                                    echo "Telechargement de l'image OK";
+                                }else
                                 {
-                                    echo "Echec de l'ajout à la base";
+                                    echo "Echec de l'upload 1 <br/>".$SQL;
                                 }
-                            }
-                            else
-                                echo "Echec de l'upload" ;
+                            }else
+                                echo "Echec de l'upload 2 <br/>" ;
                         }
-                    }
+                    }else echo "Echec de l'ajout de l'image : fichier non trouvé<br/>";
                 }
                 else
                 {
