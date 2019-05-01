@@ -32,7 +32,37 @@ header {
     height: 60%;
 }
 
-#menu_tool {}
+#menu_tool_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+#menu_tool_wrapper p {
+    margin: 3px 0 0 0;
+}
+#menu_tool_wrapper #Rectangle_middle {
+    -webkit-transition: fill-opacity 0.25s;
+    -moz-transition: fill-opacity 0.25s;
+    -ms-transition: fill-opacity 0.25s;
+    -o-transition: fill-opacity 0.25s;
+    transition: fill-opacity 0.25s;
+}
+
+#menu_tool_wrapper:hover #Rectangle_top{
+    transform-origin: 0 3px;
+    transform: rotate(30deg) translateX(1px) translateY(-1px);
+    transition-duration: 250ms;
+}
+#menu_tool_wrapper:hover #Rectangle_bottom {
+    transform-origin: left;
+    transform: rotate(-30deg)translateX(-2px) translateY(1px);
+    transition-duration: 250ms;
+}
+#menu_tool_wrapper:hover #Rectangle_middle {
+    fill-opacity: 0;
+}
 
 #icons {
     display: flex;
@@ -135,9 +165,8 @@ header {
     text-decoration: none;
     color: var(--main-gray);
 }
-#wrapper_bottom_header a:active, #wrapper_bottom_header a:hover {
+#wrapper_bottom_header a:active, #wrapper_bottom_header a:hover{
     text-decoration: underline;
-
     color: var(--main-color);
 }
 
