@@ -48,6 +48,7 @@
                     //A rajouter : email de l'acheteur à recup dans la session
                     //           : Liste des id des items achetés à recupérer dans le panier (ou la session)
                     //           : Prix de la commande à recuperer dans le panier (ou la session)
+                    //Il faut enlever de la table item les objets achetés à ce moment là
                     $SQL ="INSERT INTO  purchase(card_number,adress,city,postal_code,contact_number,country,surname,firstname) VALUES(\"" . $number ."\",\"" . $adress ."\",\"" . $city ."\",\"" . $postal_code ."\",\"" . $tel ."\",\"" . $country ."\",\"" . $surname ."\",\"" . $firstname ."\")";
                     if(mysqli_query($db_handle, $SQL))
                     {
