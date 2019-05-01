@@ -1,38 +1,3 @@
-@font-face {
-    src: url('https://fonts.googleapis.com/css?family=Raleway');
-}
-:root {
-    /* https://stackoverflow.com/questions/4847850/is-it-possible-to-define-constants-in-css */
-    --main-color : #007178;
-    --second-color : #A3106D;
-    --main-gray : #505050;
-    --second-gray : #2D2D2D;
-
-    --font-raleway:'Raleway', sans-serif;
-}
-
-html, body {
-    min-width: 1200px;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-
-    /*background-image: url("../Assets/WebSiteResources/images/leather_bg.jpg");*/
-}
-#main_wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 7%;
-
-    background-color: white;
-    font-family: var(--font-raleway);
-    font-weight: 100;
-}
-
 .cat_item {
     display: flex;
     flex-direction: row;

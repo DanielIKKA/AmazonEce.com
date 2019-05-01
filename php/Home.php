@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title> ECEamazon.com </title>
+    <link rel="stylesheet" type="text/css" href="../Css/GeneralStylesheet.css">
     <link rel="stylesheet" type="text/css" href="../Css/HomeStylesheet.css">
 </head>
 <body>
