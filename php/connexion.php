@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title> ECEamazon.com </title>
+    <title> Connexion </title>
     <link rel="stylesheet" type="text/css" href="../Css/GeneralStylesheet.css">
     <link rel="stylesheet" type="text/css" href="../Css/ConnexionSylesheet.css">
 </head>
@@ -12,7 +12,7 @@
 
 <!-- main body home page -->
 <main>
-    <div id="main_wrapper">
+    <div class="main_wrapper">
         <div class="connexion">
             <h1>Se Connecter</h1>
             <form id="form_wrapper" method="post" action="traitement_connexion.php">

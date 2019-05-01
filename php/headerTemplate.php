@@ -78,7 +78,7 @@
     <hr id="separator_top_bottom">
 
     <div id="wrapper_bottom_header">
-        <div class="item_bottom" id="item1_bottom"><a href="#">Accueil</a></div>
+        <div class="item_bottom" id="item1_bottom"><a href="Home.php">Accueil</a></div>
         <div class="item_bottom" id="item2_bottom"><a href="#">Ventes Flash</a></div>
         <div class="item_bottom" id="item3_bottom"><a href="#">Livres</a></div>
         <div class="item_bottom" id="item4_bottom"><a href="#">Musiques</a></div>
