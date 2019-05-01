@@ -15,11 +15,11 @@
     <div id="main_wrapper">
         <div class="connexion">
             <h1>Se Connecter</h1>
-            <div id="form_wrapper" method="post" action="traitement_connexion.php">
-                <input class="input_text" id="email" type="text" name="email">
-                <input class="input_text" id="password" type="password" name="password">
-                <input type="submit" value="Se connecter"/>
-                <a class="input_btn" href="inscription.php">S'enregistrer</a>
+            <form id="form_wrapper" method="post" action="traitement_connexion.php">
+                <input class="input_text" id="email" type="text" name="email" placeholder="e-mail">
+                <input class="input_text" id="password" type="password" name="password" placeholder="mot de passe">
+                <input type="submit" value="Connexion"/>
+                <a class="input_btn" href="inscription.php">Créer un compte</a>
             </form>
         </div>
     </div>
