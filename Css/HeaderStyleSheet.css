@@ -1,0 +1,175 @@
+@font-face {
+    src: url('https://fonts.googleapis.com/css?family=Raleway');
+}
+:root {
+    /* https://stackoverflow.com/questions/4847850/is-it-possible-to-define-constants-in-css */
+    --main-color : #007178;
+    --second-color : #A3106D;
+    --main-gray : #505050;
+    --second-gray : #2D2D2D;
+
+    --font-raleway:'Raleway', sans-serif;
+}
+
+header {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    font-family: var(--font-raleway);
+    font-weight: 100;
+    color: var(--main-gray);
+}
+
+#item2_top { flex: 1; }
+#item3_top { flex: 1.2; justify-content: flex-end;}
+#item1_top { flex: 1.2; }
+
+#top_header {
+    display: flex;
+    flex-direction: row;
+    height: 60%;
+}
+
+#menu_tool_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+}
+#menu_tool_wrapper p {
+    margin: 3px 0 0 0;
+}
+#menu_tool_wrapper #Rectangle_middle {
+    -webkit-transition: fill-opacity 0.25s;
+    -moz-transition: fill-opacity 0.25s;
+    -ms-transition: fill-opacity 0.25s;
+    -o-transition: fill-opacity 0.25s;
+    transition: fill-opacity 0.25s;
+}
+
+#menu_tool_wrapper:hover #Rectangle_top{
+    transform-origin: 0 3px;
+    transform: rotate(30deg) translateX(1px) translateY(-1px);
+    transition-duration: 250ms;
+}
+#menu_tool_wrapper:hover #Rectangle_bottom {
+    transform-origin: left;
+    transform: rotate(-30deg)translateX(-2px) translateY(1px);
+    transition-duration: 250ms;
+}
+#menu_tool_wrapper:hover #Rectangle_middle {
+    fill-opacity: 0;
+}
+
+#icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-self: center;
+    width: 40%;
+}
+#icon_about, #icon_profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 54px;
+    width: 45%;
+
+    font-size: 0.7em;
+    font-weight: 100;
+    text-align: center;
+}
+
+#icons img { align-self: center; width: 60%; height: 60% }
+#icons p { height: 20%; margin: 5px 0 0 0;}
+
+#separator_vertical {
+    margin: -2% 20px;
+}
+
+#cart {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    align-self: center;
+    margin-right: 10%;
+    border-radius: 5px;
+    border: solid cadetblue 1px;
+
+    fill: var(--main-color);
+    color: var(--main-color);
+    height: 60%;
+    width: 20%;
+
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+#cart:hover {
+    color: white;
+    fill: white;
+    background-color: var(--main-color);
+}
+#icon_cart {
+    height: 100%;
+    width: 40%;
+    margin-left: 5%;
+}
+
+#cart h1 {
+    margin: 0 5%;
+    font-size: 90%;
+    font-weight: 100;
+    text-align: center;
+
+    width: 80%;
+}
+
+.contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.item_top {
+    display: flex;
+    flex-direction: row;
+    width: 33.3%;
+}
+.pointer:hover {
+    cursor: pointer;
+}
+
+#separator_top_bottom {
+    margin: 20px 2%;
+}
+#wrapper_bottom_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20%;
+
+    text-align: center;
+    font-size: 1.3em;
+    height: 25%;
+}
+
+#wrapper_bottom_header a:link, #wrapper_bottom_header a:visited {
+    text-decoration: none;
+    color: var(--main-gray);
+}
+#wrapper_bottom_header a:active, #wrapper_bottom_header a:hover{
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+.item_bottom {
+    margin: 0 7px;
+}

@@ -8,6 +8,13 @@
 <body>
     <!-- import the header template -->
     <?php include ("headerTemplate.php") ; ?>
-    <hi> hey </hi>
+
+    <!-- main body home page -->
+    <main id="main_wrapper">
+
+    </main>
+
+    <!-- import the footer template -->
+    <?php include("footerTemplate.php"); ?>
 </body>
 </html>

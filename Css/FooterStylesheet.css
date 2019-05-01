@@ -1,0 +1,54 @@
+@font-face {
+    src: url('https://fonts.googleapis.com/css?family=Raleway');
+}
+:root {
+    --main-color : #007178;
+    --second-color : #A3106D;
+    --main-gray : #505050;
+    --second-gray : #2D2D2D;
+
+    --font-raleway:'Raleway', sans-serif;
+}
+
+footer {
+    background-color: var(--main-color);
+    font-family: var(--font-raleway);
+    font-weight: 100;
+    font-size: 0.9em;
+    color: white;
+}
+
+#categories_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title_cat {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin: 5px 0;
+}
+.small {
+    font-size: 0.7em;
+    font-weight: 100;
+}
+.wrapper_texts{
+    display: flex;
+    flex-direction: column;
+
+    margin: 2% 20px;
+}
+.linked:link , .linked:visited {
+    text-decoration: none;
+    color: white;
+}
+.linked:active, .linked:hover {
+    text-decoration: underline;
+}
+
+#copyright {
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 20px;
+}
