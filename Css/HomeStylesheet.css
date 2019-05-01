@@ -15,11 +15,20 @@ html, body {
     min-width: 1200px;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    /*background-image: url("../Assets/WebSiteResources/images/leather_bg.jpg");*/
+}
 #main_wrapper {
     display: flex;
     flex-direction: column;
     margin: 20px 7%;
 
+    background-color: white;
     font-family: var(--font-raleway);
     font-weight: 100;
 }
@@ -27,7 +36,7 @@ html, body {
 .cat_item {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     margin: 1% 0;
 
