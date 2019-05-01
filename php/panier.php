@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once "Fonctions_panier.php";
+    include "Fonctions_panier.php";
 
     $erreur = false;
 
@@ -17,16 +17,18 @@
         $price = $_GET['price'];
 
     if(isset($_GET['description']))
-        $description = $_GET['description'];
+        $description = stripslashes($_GET['description']);
 
     if(isset($_GET['photo']))
         $photo = $_GET['photo'];
 
     if(isset($_GET['name']))
-        $name = $_GET['name'];
+        $name = stripslashes($_GET['name']);
 
 
-    if(!$erreur)
+
+
+    if(!$erreur and isset($_GET['action']))
     {
         switch ($action)
         {
@@ -47,7 +49,7 @@
 
     ?>
 
-<table>
+<table width="1000">
     <tr>
         <td>Votre panier</td>
     </tr>
@@ -75,13 +77,15 @@
                 echo "<td><img src=\"../Assets/BDD_Images/".$_SESSION['panier']['photo'][$i]."\"></td>";
                 echo "<td>".$_SESSION['panier']['description'][$i]."</td>";
                 echo "<td>".$_SESSION['panier']['quantity'][$i]."</td>";
-                echo "<td>".$_SESSION['panier']['price'][$i]."</td>";
+                echo "<td>".$_SESSION['panier']['price'][$i]."€</td>";
                 echo "</tr>";
             }
 
-            echo "<tr><td colspan=\"2\"> </td>";
             echo "<td colspan=\"2\">";
-            echo "Total : ".total_price();
+            echo "<br/>Total : ".total_price()."€";
+            echo "<form method=\"post\" action=\"Payment_Form.php\" enctype=\"multipart/form-data\">
+                    <input type=\"submit\" value=\"Passer la commande\"/>
+                  </form>";
             echo "</td></tr>";
         }
     }

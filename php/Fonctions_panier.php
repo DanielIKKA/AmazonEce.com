@@ -36,13 +36,14 @@
             }
             else
             {
+                $quantite = 1;
                 //sinon on ajoute le produit
-                    array_push( $_SESSION['panier']['id'],$id);
-                    array_push( $_SESSION['panier']['price'],$price);
-                    array_push( $_SESSION['panier']['quantity'],1);
                     array_push( $_SESSION['panier']['photo'],$photo);
                     array_push( $_SESSION['panier']['description'],$description);
                     array_push( $_SESSION['panier']['name'],$name);
+                    array_push( $_SESSION['panier']['id'],$id);
+                    array_push( $_SESSION['panier']['price'],$price);
+                    array_push( $_SESSION['panier']['quantity'],$quantite);
                 }
             }
     }
@@ -121,4 +122,23 @@
         return $total;
     }
 
+    function items_id_toString()
+    {
+        $item_id_list = "";
+        $nbArticles=count($_SESSION['panier']['id']);
+        for ($i=0 ;$i < $nbArticles ; $i++)
+        {
+            $item_id_list = $item_id_list . "_".$_SESSION['panier']['id'][$i];
+        }
+        return $item_id_list;
+    }
+
+    function clear_cart()
+    {
+        $nbArticles=count($_SESSION['panier']['id']);
+        for ($i=0 ;$i < $nbArticles ; $i++)
+        {
+            unset($_SESSION['panier']);
+        }
+    }
 

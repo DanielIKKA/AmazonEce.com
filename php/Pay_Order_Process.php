@@ -1,5 +1,6 @@
 <?php
-
+    session_start();
+    include "Fonctions_panier.php";
     $info_bank = false;
     $info_perso = false;
 
@@ -22,6 +23,10 @@
         $country = $_POST['country'];
         $postal_code = $_POST['postal_code'];
         $tel = $_POST['tel'];
+
+        $item_id_list = items_id_toString();
+
+        $price = total_price();
 
         $type = $_POST['type'];
         $number = $_POST['number'];
@@ -46,13 +51,13 @@
                 {
                     echo "Informations bancaires OK<br/>";
                     //A rajouter : email de l'acheteur à recup dans la session
-                    //           : Liste des id des items achetés à recupérer dans le panier (ou la session)
-                    //           : Prix de la commande à recuperer dans le panier (ou la session)
                     //Il faut enlever de la table item les objets achetés à ce moment là
-                    $SQL ="INSERT INTO  purchase(card_number,adress,city,postal_code,contact_number,country,surname,firstname) VALUES(\"" . $number ."\",\"" . $adress ."\",\"" . $city ."\",\"" . $postal_code ."\",\"" . $tel ."\",\"" . $country ."\",\"" . $surname ."\",\"" . $firstname ."\")";
+                    $SQL ="INSERT INTO  purchase(card_number,adress,city,postal_code,contact_number,country,surname,firstname,item_id_list,price) VALUES(\"" . $number ."\",\"" . $adress ."\",\"" . $city ."\",\"" . $postal_code ."\",\"" . $tel ."\",\"" . $country ."\",\"" . $surname ."\",\"" . $firstname ."\",\"" . $item_id_list ."\",\"" . $price ."\")";
                     if(mysqli_query($db_handle, $SQL))
                     {
                         echo "Commande enregistrée<br/>";
+                        //On peut vider le panier
+                        clear_cart();
                     }
                     else echo "echec de la requete : ".$SQL ."<br/>Erreur :" . mysqli_error($db_handle);
                 }

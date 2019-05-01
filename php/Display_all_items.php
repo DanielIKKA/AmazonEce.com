@@ -31,7 +31,7 @@
                        <td>".$db_field['description']."</td>
                        <td>".$db_field['price']."€"."</td>
                        <td>".$db_field['category']."</td>
-                       <td><a href='panier.php?action=add&amp;id=".$db_field['id']."&amp;price=".$db_field['price']."&amp;photo=".$db_field['pic1']."&amp;description=".$db_field['description']."&amp;name=".$db_field['name']."'>Ajouter au panier</a></td>
+                       <td><a href=\"panier.php?action=add&amp;id=".$db_field['id']."&amp;price=".$db_field['price']."&amp;photo=".$db_field['pic1']."&amp;description=".addslashes($db_field['description'])."&amp;name=".addslashes($db_field['name'])."\">Ajouter au panier</a></td>
                   </tr>";
         }
     }
