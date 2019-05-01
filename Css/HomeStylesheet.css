@@ -1,3 +1,34 @@
 html, body {
     min-width: 1200px;
 }
+
+#main_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 7%;
+}
+
+.cat_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 1% 0;
+
+    height: 250px;
+}
+
+.pic {
+    width: 70%;
+}
+
+.section_side {
+    display: flex;
+    flex-direction: column;
+}
+
+.fit{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
