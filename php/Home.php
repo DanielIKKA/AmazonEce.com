@@ -9,6 +9,11 @@
     <!-- import the header template -->
     <?php include ("headerTemplate.php") ; ?>
 
+    <!-- main body home page -->
+    <main id="main_wrapper">
+
+    </main>
+
     <!-- import the footer template -->
     <?php include("footerTemplate.php"); ?>
 </body>
