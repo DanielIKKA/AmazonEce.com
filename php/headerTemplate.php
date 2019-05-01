@@ -22,17 +22,17 @@
         </div>
 
         <div id="item2_top" class="item_top">
-            <img class="contain" src="../Assets/WebSiteResources/Logo.png" alt="logo du site">
+            <img class="contain" src="../Assets/WebSiteResources/header/Logo.png" alt="logo du site">
         </div>
 
         <div id="item3_top" class="item_top">
             <div id="icons">
                 <div class="pointer" id="icon_profil">
-                    <img class="contain" src="../Assets/WebSiteResources/My_account_icon.png">
+                    <img class="contain" src="../Assets/WebSiteResources/header/My_account_icon.png" alt="profil icon">
                     <p>Mon compte</p>
                 </div>
                 <div class="pointer" id="icon_about">
-                    <img class="contain" src="../Assets/WebSiteResources/About_us_icon.png">
+                    <img class="contain" src="../Assets/WebSiteResources/header/About_us_icon.png" alt="abous us icon">
                     <p>A propos de nous</p>
                 </div>
             </div>

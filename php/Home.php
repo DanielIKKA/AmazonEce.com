@@ -13,7 +13,7 @@
     <main id="main_wrapper">
         <div class="cat_item" id="cat_item_1">
             <div class="pic">
-                <img class="fit" src="../Assets/WebSiteResources/books_image.jpg">
+                <img class="fit" src="../Assets/WebSiteResources/images/books_image.jpg">
             </div>
             <section class="section_side">
                 <a href="#">Vente Flash</a>
@@ -23,7 +23,7 @@
         </div>
         <div class="cat_item" id="cat_item_2">
             <div class="pic">
-                <img class="fit" src="../Assets/WebSiteResources/books_image.jpg">
+                <img class="fit" src="../Assets/WebSiteResources/images/music_image.jpg">
             </div>
             <section class="section_side">
                 <a href="#">Vente Flash</a>
@@ -33,7 +33,7 @@
         </div>
         <div class="cat_item" id="cat_item_3">
             <div class="pic">
-                <img class="fit" src="../Assets/WebSiteResources/books_image.jpg">
+                <img class="fit" src="../Assets/WebSiteResources/images/clothes_image.jpg">
             </div>
             <section class="section_side">
                 <a href="#">Vente Flash</a>
@@ -43,7 +43,7 @@
         </div>
         <div class="cat_item" id="cat_item_4">
             <div class="pic">
-                <img class="fit" src="../Assets/WebSiteResources/books_image.jpg">
+                <img class="fit" src="../Assets/WebSiteResources/images/sports_image.jpeg">
             </div>
             <section class="section_side">
                 <a href="#">Vente Flash</a>
