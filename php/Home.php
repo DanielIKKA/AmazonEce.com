@@ -8,5 +8,8 @@
 <body>
     <!-- import the header template -->
     <?php include ("headerTemplate.php") ; ?>
+
+    <!-- import the footer template -->
+    <?php include("footerTemplate.php"); ?>
 </body>
 </html>
