@@ -1,0 +1,45 @@
+.connexion {
+    border: solid rgba(128,128,128,0.7) 1px;
+    padding: 10% 20%;
+}
+
+.connexion h1 {
+    font-size: 2.5em;
+    font-weight: 100;
+    text-align: center;
+    color: var(--main-gray);
+    margin: 0 0 15px 0;
+}
+
+#form_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input_text {
+    height: 30px;
+    margin: 5px 0;
+
+    border: 1px rgba(128,128,128,0.7) solid;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.input_btn, input[type=submit]{
+
+    padding: 0;
+    background: none;
+
+    border: 1px var(--main-color) solid;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    cursor:pointer;
+
+    height: 40px;
+    font-size: 1.5em;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 20%;
+}
