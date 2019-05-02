@@ -1,0 +1,23 @@
+.wrapper_feature {
+    display: flex;
+    flex-direction: column;
+
+    width: 250px;
+    height: 250px;
+    border: solid rgba(128,128,128,0.7) 1px;
+}
+
+.title_feature {
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#item1_top {
+    height: 70%;
+}
+#item2 {
+    align-self: center;
+    flex: 1;
+}

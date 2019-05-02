@@ -14,7 +14,7 @@
 <main>
     <div class="main_wrapper">
         <div class="sign_in">
-            <h1>Se Connecter</h1>
+            <h1 class="sign_in_title">Se Connecter</h1>
             <form id="form_wrapper" method="post" action="traitement_inscription.php">
                 <section class="item_section" id="general_section">
                     <h1 class="title_section">Informations générales<span class="important_text">*</span></h1>

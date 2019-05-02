@@ -3,15 +3,15 @@
 <footer id="wrapper" class="border">
     <div id="categories_wrapper">
         <div class="wrapper_texts" id="categorie_section">
-            <a class="linked" href="#"><h1 class="title_cat">Categories</h1></a>
-            <a class="linked small" href="#">Livres</a>
+            <a class="linked" href="Home.php"><h1 class="title_cat">Categories</h1></a>
+            <a class="linked small" href="Livres.php">Livres</a>
             <a class="linked small" href="#">Musiques</a>
             <a class="linked small" href="#">Sports et Loisir</a>
             <a class="linked small" href="#">Vêtements</a>
         </div>
         <div class="wrapper_texts" id="vente_flash_section">
             <a class="linked" href="#"><h1 class="title_cat">Ventes Flash</h1></a>
-            <a class="linked small" href="#">Livres</a>
+            <a class="linked small" href="">Livres</a>
             <a class="linked small" href="#">Musiques</a>
             <a class="linked small" href="#">Sports et Loisir</a>
             <a class="linked small" href="#">Vêtements</a>
