@@ -11,22 +11,14 @@
             $_SESSION['panier']['description']=array();
             $_SESSION['panier']['quantity'] = array();
             $_SESSION['panier']['price'] = array();
-            $_SESSION['panier']['lock'] = false;
         }
         return true;
     }
 
-    function isLocked()
-    {
-        if(isset($_SESSION['panier']))
-            return $_SESSION['panier']['lock'];
-        else
-            return false;
-    }
 
     function add($id,$price,$photo,$description,$name)
     {
-        if(creation_panier() and !isLocked())
+        if(creation_panier())
         {
             //si il existe deja on ajoute juste la quantite
             $position = array_search($id,$_SESSION['panier']['id']);
@@ -51,7 +43,7 @@
 
     function delete($id)
     {
-        if(creation_panier() and !isLocked())
+        if(creation_panier())
         {
             //panier temporaire pour eviter de créer des valeurs NULL dans le panier
             $tmp=array();
@@ -86,7 +78,7 @@
 
     function add_quantity($id)
     {
-        if(creation_panier() and !isLocked())
+        if(creation_panier())
         {
             $position = array_search($id,$_SESSION['panier']['id']);
             if($position !== false)
@@ -98,7 +90,7 @@
 
     function remove_quantity($id)
     {
-        if(creation_panier() and !isLocked())
+        if(creation_panier())
         {
             $position = array_search($id,$_SESSION['panier']['id']);
             if($position !== false)

@@ -78,6 +78,9 @@
                 echo "<td>".$_SESSION['panier']['description'][$i]."</td>";
                 echo "<td>".$_SESSION['panier']['quantity'][$i]."</td>";
                 echo "<td>".$_SESSION['panier']['price'][$i]."€</td>";
+                echo "<td><a href=\"panier.php?action=add_quantity&amp;id=".$_SESSION['panier']['id'][$i]."\">+1</a></td>";
+                echo "<td><a href=\"panier.php?action=remove_quantity&amp;id=".$_SESSION['panier']['id'][$i]."\">-1</a></td>";
+                echo "<td><a href=\"panier.php?action=delete&amp;id=".$_SESSION['panier']['id'][$i]."\">Supprimer du panier</a></td>";
                 echo "</tr>";
             }
 
