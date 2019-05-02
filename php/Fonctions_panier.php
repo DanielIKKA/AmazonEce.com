@@ -64,7 +64,7 @@
                     array_push( $tmp['price'],$_SESSION['panier']['price'][$i]);
                     array_push( $tmp['name'],$_SESSION['panier']['name'][$i]);
                     array_push( $tmp['photo'],$_SESSION['panier']['photo'][$i]);
-                    array_push( $tmp['description'],$_SESSION['description']['id'][$i]);
+                    array_push( $tmp['description'],$_SESSION['panier']['description'][$i]);
                 }
 
             }

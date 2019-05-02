@@ -27,7 +27,7 @@
             echo "<tr>
                        <td>".$db_field['name']."</td>
                        <td>".$db_field['seller_email']."</td>
-                       <td><img width='200' height='200' src=\"../Assets/BDD_Images/".$db_field['pic1']."\"></td>
+                       <td><img width='100' height='100' src=\"../Assets/BDD_Images/".$db_field['pic1']."\"></td>
                        <td>".$db_field['description']."</td>
                        <td>".$db_field['price']."€"."</td>
                        <td>".$db_field['category']."</td>

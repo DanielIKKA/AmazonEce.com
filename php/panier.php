@@ -74,7 +74,7 @@
             {
                 echo "<tr>";
                 echo "<td>".$_SESSION['panier']['name'][$i]."</td>";
-                echo "<td><img src=\"../Assets/BDD_Images/".$_SESSION['panier']['photo'][$i]."\"></td>";
+                echo "<td><img width='100' height='100' src=\"../Assets/BDD_Images/".$_SESSION['panier']['photo'][$i]."\"></td>";
                 echo "<td>".$_SESSION['panier']['description'][$i]."</td>";
                 echo "<td>".$_SESSION['panier']['quantity'][$i]."</td>";
                 echo "<td>".$_SESSION['panier']['price'][$i]."€</td>";
