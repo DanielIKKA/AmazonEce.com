@@ -1,3 +1,70 @@
-html, body {
-    min-width: 1200px;
+.cat_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    margin: 1% 0;
+
+    height: 250px;
+}
+
+.pic {
+    position: relative;
+    width: 70%;
+}
+
+.rect_hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: initial;
+    top: initial;
+
+    opacity: 0;
+    background-color: black;
+
+    text-align: center;
+
+    -webkit-transition: opacity 0.25s;
+    -moz-transition: opacity 0.25s;
+    -ms-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+}
+.rect_hover h1 {
+    margin: 0;
+    font-weight: 100;
+    font-size: 3em;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+.rect_hover:hover {
+    opacity: 0.7;
+}
+
+.section_side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 1.4em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    width: 25%;
+}
+.section_side a {
+    color: var(--main-gray);
+    text-decoration: none;
+    margin: 5px 0;
+}
+.section_side a:hover {
+    color: var(--main-color);
+}
+
+.fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

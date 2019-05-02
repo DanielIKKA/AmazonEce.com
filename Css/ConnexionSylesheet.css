@@ -1,0 +1,26 @@
+.connexion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid rgba(128,128,128,0.7) 1px;
+    padding: 4% 20%;
+    height: 350px;
+
+}
+
+.connexion h1 {
+    font-size: 2.5em;
+    font-weight: 100;
+    text-align: center;
+    color: var(--main-gray);
+    margin: 0 0 15px 0;
+}
+
+.input_text {
+    margin: 5px 15%;
+}
+
+#form_wrapper {
+    display: flex;
+    flex-direction: column;
+}

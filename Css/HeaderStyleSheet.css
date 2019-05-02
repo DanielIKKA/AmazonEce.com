@@ -1,21 +1,8 @@
-@font-face {
-    src: url('https://fonts.googleapis.com/css?family=Raleway');
-}
-:root {
-    /* https://stackoverflow.com/questions/4847850/is-it-possible-to-define-constants-in-css */
-    --main-color : #007178;
-    --second-color : #A3106D;
-    --main-gray : #505050;
-    --second-gray : #2D2D2D;
-
-    --font-raleway:'Raleway', sans-serif;
-}
-
 header {
     height: 130px;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin: 20px 0;
 
     font-family: var(--font-raleway);
     font-weight: 100;
@@ -121,6 +108,7 @@ header {
     height: 100%;
     width: 40%;
     margin-left: 5%;
+    display: flex;
 }
 
 #cart h1 {
