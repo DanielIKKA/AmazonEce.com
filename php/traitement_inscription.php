@@ -1,6 +1,7 @@
 <?php
     echo"<link rel='stylesheet' type='text/css' href='../Css/GeneralStylesheet.css'>";
     include "headerTemplate.php";
+    displayHeader();
     if(isset($_POST['surname']) AND isset($_POST['firstname']) AND isset($_POST['email'])and isset($_POST['password']) and isset($_POST['password_confirm'])AND isset($_POST['user_type'])and isset($_POST['background']))
     {
         $adress_info = false;

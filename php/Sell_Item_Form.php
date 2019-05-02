@@ -1,5 +1,6 @@
 <?php
 include "headerTemplate.php";
+displayHeader();
     ?>
 
 <div class="Champs_communs">

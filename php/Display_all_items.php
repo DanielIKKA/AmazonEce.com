@@ -1,5 +1,6 @@
 <?php
     include "headerTemplate.php";
+    displayHeader();
     ?>
 
 <table>
@@ -15,7 +16,6 @@
 
 
 <?php
-    session_start();
 
     require '../../../config.php';
     $db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS );
