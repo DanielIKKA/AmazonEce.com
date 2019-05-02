@@ -12,7 +12,7 @@
 
     <!-- main body home page -->
     <main>
-        <div id="main_wrapper">
+        <div class="main_wrapper">
             <div class="cat_item" id="cat_item_1">
                 <a href="#" class="pic">
                     <div class="rect_hover fit">

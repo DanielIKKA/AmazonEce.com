@@ -108,6 +108,7 @@ header {
     height: 100%;
     width: 40%;
     margin-left: 5%;
+    display: flex;
 }
 
 #cart h1 {
