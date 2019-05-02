@@ -1,3 +1,7 @@
+<?php
+include "headerTemplate.php";
+    ?>
+
 <div class="Champs_communs">
     <form method="post" action="Item_Upload.php" enctype="multipart/form-data">
         A quelle catégorie appartient le produit que vous désirez vendre ?<br />
@@ -24,4 +28,4 @@
     </form>
 </div>
 
-
+<?php include "footerTemplate.php";?>

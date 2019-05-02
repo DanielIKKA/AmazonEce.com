@@ -1,5 +1,6 @@
 <?php session_start();
-      include "Fonctions_gestion_users.php"?>
+      include "Fonctions_gestion_users.php";
+      include "headerTemplate.php";?>
 <table>
     <tr>
         <th>Type</th>
@@ -50,3 +51,4 @@
     }
     ?>
 </table>
+<?php include "footerTemplate.php";?>

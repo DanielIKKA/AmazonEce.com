@@ -1,3 +1,7 @@
+<?php
+    include "headerTemplate.php";
+    ?>
+
 <table>
     <tr>
         <th>Nom du produit</th>
@@ -37,3 +41,5 @@
     }
     ?>
 </table>
+
+<?php include "footerTemplate.php";?>
