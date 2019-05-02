@@ -31,6 +31,15 @@
                     <input class="input_text field_margin" type="password" name="password" id="password" placeholder="mot de passe">
                     <input class="input_text field_margin" type="password" name="password_confirm" id="password_confirm"
                                placeholder="confirmation">
+
+                    <input type="hidden" name="MAX_FILE_SIZE" value="50000000">Ajoutez une photo de profil : <input type="file" name="photo"><br/>
+
+                    Si vous le désirez, choisissez un thème pour personnaliser votre navigation <br/>
+                    <input type="radio" name="background" value="wood" id="wood"/> <label for="wood">Parquet</label><br/>
+                    <input type="radio" name="background" value="wall" id="wall"/> <label for="wall">Briques</label><br/>
+                    <input type="radio" name="background" value="leather" id="leather"/> <label for="leather">Cuir</label><br/>
+                    <input type="radio" name="background" value="none" id="none"/> <label for="none">Aucun</label><br/>
+
                 </section>
 
                 <hr class="horizontal_separator_item"/>
