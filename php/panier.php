@@ -13,26 +13,32 @@
     if(isset($_GET['id']))
         $id = $_GET['id'];
 
-    if(isset($_GET['price']))
-        $price = $_GET['price'];
-
-    if(isset($_GET['description']))
-        $description = stripslashes($_GET['description']);
-
-    if(isset($_GET['photo']))
-        $photo = $_GET['photo'];
-
-    if(isset($_GET['name']))
-        $name = stripslashes($_GET['name']);
-
-
-
 
     if(!$erreur and isset($_GET['action']))
     {
         switch ($action)
         {
             Case "add" :
+                require '../../../config.php';
+                $db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS );
+                $database = "amazonece";
+                $db_found = mysqli_select_db( $db_handle, $database );
+                if($db_found)
+                {
+                    $SQL = "SELECT * FROM item WHERE item.id=\"".$id."\"";
+                    $result = mysqli_query($db_handle,$SQL);
+                    if($result)
+                    {
+                        while ($db_field = mysqli_fetch_assoc($result))
+                        {
+                            $price = $db_field['price'];
+                            $name = $db_field['name'];
+                            $description = $db_field['description'];
+                            $photo = $db_field['pic1'];
+
+                        }
+                    }else echo $SQL;
+                }
                 add($id,$price,$photo,$description,$name);
                 break;
             Case "delete" :
