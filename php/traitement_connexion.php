@@ -1,4 +1,6 @@
 <?php
+    include "headerTemplate.php";
+
 
     if(isset($_POST['email']) AND isset($_POST['password']))
     {
@@ -21,9 +23,8 @@
                     if($db_field['password'] == $password)
                     {
                         echo "Bienvenue ". $db_field['firstname'];
-                        //$_SESSION['email']= $_POST['email'];
-                        //$_SESSION['type']= $_POST['type'];
-
+                        $_SESSION['email']= $_POST['email'];
+                        $_SESSION['type']= $_POST['type'];
                     }
                     else
                     {
@@ -40,3 +41,5 @@
         else
             echo "Database not found";
     }
+
+include "footerTemplate.php";

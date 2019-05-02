@@ -1,4 +1,5 @@
 <?php
+    include "headerTemplate.php";
 
     if(isset($_POST['category']) AND isset($_POST['name']) AND isset($_POST['price']) AND isset($_POST['description']))
     {
@@ -64,6 +65,8 @@
     {
         echo "Base de données introuvable";
     }
+
+    include "footerTemplate.php";?>
 
 
 
