@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     border: solid rgba(128,128,128,0.7) 1px;
-    padding: 4% 20%;
+    padding: 4% 5%;
 }
 
 .sign_in h1 {
@@ -19,3 +19,43 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+
+.item_section {
+    display: flex;
+    flex-direction: column;
+}
+.item_section h1 {
+    font-size: 2em;
+    text-align: initial;
+}
+.item_section:first-child {margin-top: 50px;}
+#bank_info_section {margin-bottom: 50px;}
+
+#buyer, #seller {margin-left: 10px;}
+#category_selection p {
+    margin: 0 0 10px 0;
+    color: var(--main-gray);
+    font-size: 1.1em;
+}
+
+#identity_group { display: flex; flex-direction: row; justify-content: space-between; }
+#surname { flex: 1; margin-right: 5px; }
+#firstname { flex: 1; margin-left: 5px; }
+
+#adress_group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#postal_code, #country{ width: 20%;}
+#city { width: 45%; }
+
+#bank_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#validity, #secret_number { width: 25%; margin: 0 5px; padding: 1px 1px 1px 10px;}
+
+.field_margin { margin: 5px 20%; }
+.important_text { font-style: italic; color: var(--second-color); }

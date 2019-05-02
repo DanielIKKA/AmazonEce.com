@@ -16,8 +16,11 @@
     margin: 0 0 15px 0;
 }
 
+.input_text {
+    margin: 5px 15%;
+}
+
 #form_wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 }

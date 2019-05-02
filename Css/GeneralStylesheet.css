@@ -36,8 +36,7 @@ main {
 
 .input_text {
     height: 30px;
-    margin: 5px 10%;
-
+    margin: 5px 0;
     border: 1px rgba(128,128,128,0.7) solid;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -90,4 +89,8 @@ main {
 input[type=submit]:hover {
     background-color: var(--main-color);
     color: white;
+}
+
+.horizontal_separator_item {
+    margin: 25px 0;
 }
