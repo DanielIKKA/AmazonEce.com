@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title> Connexion </title>
-    <link rel="stylesheet" type="text/css" href="../Css/GeneralStylesheet.css">
+    <?php include ("headerTemplate.php") ; ?>
     <link rel="stylesheet" type="text/css" href="../Css/ConnexionSylesheet.css">
 </head>
 <body>
 <!-- import the header template -->
-<?php include ("headerTemplate.php") ; ?>
+<?php displayHeader(); ?>
 
 <!-- main body home page -->
 <main>

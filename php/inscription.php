@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title> Crée un compte </title>
-    <link rel="stylesheet" type="text/css" href="../Css/GeneralStylesheet.css">
+    <?php include ("headerTemplate.php") ; ?>
     <link rel="stylesheet" type="text/css" href="../Css/InscriptionStylesheet.css">
 </head>
 <body>
 <!-- import the header template -->
-<?php include ("headerTemplate.php") ; ?>
+<?php displayHeader(); ?>
 
 <!-- main body home page -->
 <main>
     <div class="main_wrapper">
         <div class="sign_in">
-            <h1>Se Connecter</h1>
+            <h1 class="sign_in_title">Se Connecter</h1>
             <form id="form_wrapper" method="post" action="traitement_inscription.php">
-                <section class="item_section" id="general_section">
+                <section class="item_section_vertical" id="general_section">
                     <h1 class="title_section">Informations générales<span class="important_text">*</span></h1>
                     <div class="field_margin" id="category_selection">
                         <p>Vous êtes ?</p>
@@ -44,7 +44,7 @@
 
                 <hr class="horizontal_separator_item"/>
 
-                <section class="item_section" id="adress_section">
+                <section class="item_section_vertical" id="adress_section">
                     <h1 class="title_section">Coordonnées<span class="important_text">*</span></h1>
                     <input class="input_text field_margin" type="text" name="adress" id="adress" placeholder="adresse">
                     <div class="field_margin" id="adress_group">
@@ -57,7 +57,7 @@
 
                 <hr class="horizontal_separator_item"/>
 
-                <section class="item_section" id="bank_info_section">
+                <section class="item_section_vertical" id="bank_info_section">
                     <h1 class="title_section">Paiement</h1>
                     <input class="input_text field_margin" type="text" name="card_number" id="card_number"
                                                      placeholder="numéro de carte banquaire">

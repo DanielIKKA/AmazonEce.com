@@ -8,7 +8,7 @@
     --main-gray : #505050;
     --second-gray : #2D2D2D;
 
-    --font-raleway:'Raleway', sans-serif;
+    --font-main:'Raleway', sans-serif;
 }
 
 html, body {
@@ -31,8 +31,19 @@ main {
     margin: 20px 7%;
 
     background-color: white;
-    font-family: var(--font-raleway);
+    font-family: var(--font-main);
     font-weight: 100;
+}
+
+.item_section_vertical {
+    display: flex;
+    flex-direction: column;
+}
+.title_section {
+    color: var(--main-gray);
+    font-weight: 100;
+    font-size: 2em;
+    text-align: initial;
 }
 
 .input_text {
@@ -43,7 +54,7 @@ main {
     border-radius: 5px;
 
     padding-left: 10px;
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-main);
     font-weight: 100;
     font-size: 1.1em;
 }
@@ -68,7 +79,7 @@ main {
     font-weight: 100;
     text-decoration: none;
     color: var(--main-color);
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-main);
 
     -webkit-transition: background-color 0.25s, color 0.25s;
     -moz-transition: background-color 0.25s, color 0.25s;
@@ -94,4 +105,15 @@ input[type=submit]:hover {
 
 .horizontal_separator_item {
     margin: 25px 0;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }

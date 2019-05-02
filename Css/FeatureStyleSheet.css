@@ -1,0 +1,43 @@
+#wrapper_template {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.wrapper_feature {
+    display: flex;
+    flex-direction: column;
+
+    width: 250px;
+    height: 250px;
+    border: solid rgba(128,128,128,0.7) 1px;
+}
+
+.price_feature {
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.title_feature {
+    width: 250px;
+    font-weight: 100;
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.features_scroll {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll ;
+}
+#item1_top {
+    height: 70%;
+}
+#item2 {
+    align-self: center;
+    flex: 1;
+}
