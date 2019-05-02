@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.4
+- https://www.phpmyadmin.net
+-
+- Hôte : 127.0.0.1:3306
+- Généré le :  jeu. 02 mai 2019 à 15:49
+- Version du serveur :  5.7.24
+- Version de PHP :  7.2.14
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="amazonece" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="adress">
+                CREATE TABLE `adress` (
+                  `id` int(50) NOT NULL AUTO_INCREMENT,
+                  `street` varchar(50) NOT NULL,
+                  `city` varchar(50) NOT NULL,
+                  `postal_code` int(10) NOT NULL,
+                  `country` varchar(50) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de données :  'amazonece'
+    -->
+    <database name="amazonece">
+        <!-- Table adress -->
+        <table name="adress">
+            <column name="id">1</column>
+            <column name="street">58 rue paul louis courier</column>
+            <column name="city">Rueil-Malmaison</column>
+            <column name="postal_code">92500</column>
+            <column name="country">France</column>
+        </table>
+        <table name="adress">
+            <column name="id">9</column>
+            <column name="street">45 boulevard Philippe</column>
+            <column name="city">Paris</column>
+            <column name="postal_code">75020</column>
+            <column name="country">France</column>
+        </table>
+        <table name="adress">
+            <column name="id">8</column>
+            <column name="street">2 rue du chapeau</column>
+            <column name="city">Rueil-Malmaison</column>
+            <column name="postal_code">92500</column>
+            <column name="country">France</column>
+        </table>
+        <table name="adress">
+            <column name="id">5</column>
+            <column name="street">78 ruelle du ciment</column>
+            <column name="city">Boulogne</column>
+            <column name="postal_code">92700</column>
+            <column name="country">France</column>
+        </table>
+        <table name="adress">
+            <column name="id">6</column>
+            <column name="street">3 rue des fleurs</column>
+            <column name="city">Paris</column>
+            <column name="postal_code">75018</column>
+            <column name="country">France</column>
+        </table>
+        <table name="adress">
+            <column name="id">7</column>
+            <column name="street">10 rue Thomas</column>
+            <column name="city">Paris</column>
+            <column name="postal_code">75019</column>
+            <column name="country">France</column>
+        </table>
+        <table name="adress">
+            <column name="id">3</column>
+            <column name="street">5 chemin vert</column>
+            <column name="city">Paris</column>
+            <column name="postal_code">75008</column>
+            <column name="country">France</column>
+        </table>
+        <table name="adress">
+            <column name="id">4</column>
+            <column name="street">11 boulevard Napoleon</column>
+            <column name="city">Paris</column>
+            <column name="postal_code">75001</column>
+            <column name="country">France</column>
+        </table>
+        <table name="adress">
+            <column name="id">2</column>
+            <column name="street">13 rue des halles</column>
+            <column name="city">Paris</column>
+            <column name="postal_code">75010</column>
+            <column name="country">France</column>
+        </table>
+        <table name="adress">
+            <column name="id">10</column>
+            <column name="street">63 chemin des morts</column>
+            <column name="city">Saint-Cloud</column>
+            <column name="postal_code">92400</column>
+            <column name="country">France</column>
+        </table>
+        <table name="adress">
+            <column name="id">12</column>
+            <column name="street">5 rue Chantecoq</column>
+            <column name="city">Puteaux</column>
+            <column name="postal_code">92808</column>
+            <column name="country">France</column>
+        </table>
+    </database>
+</pma_xml_export>
