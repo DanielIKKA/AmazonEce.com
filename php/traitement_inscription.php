@@ -101,8 +101,9 @@
                     $_SESSION['surname'] = $surname;
                     $_SESSION['firstname'] = $firstname;
 
+
                     //upload de la photo
-                    if(isset($_FILES['photo']))
+                    if (file_exists($_FILES['photo']['tmp_name']) || is_uploaded_file($_FILES['photo']['tmp_name']))
                     {
                         $extensions = array('.png', '.gif', '.jpg', '.jpeg');
                         $extension = strrchr($_FILES['photo']['name'], '.');

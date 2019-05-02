@@ -15,7 +15,7 @@
     <div class="main_wrapper">
         <div class="sign_in">
             <h1>S'inscrire</h1>
-            <form id="form_wrapper" method="post" action="traitement_inscription.php">
+            <form id="form_wrapper" method="post" action="traitement_inscription.php" enctype="multipart/form-data">
                 <section class="item_section" id="general_section">
                     <h1 class="title_section">Informations générales<span class="important_text">*</span></h1>
                     <div class="field_margin" id="category_selection">
