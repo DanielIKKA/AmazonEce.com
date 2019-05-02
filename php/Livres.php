@@ -17,12 +17,7 @@
             <h1 class="title_section">Vente Flash</h1>
             <div class="features_scroll">
                 <?php
-                feature_normal("le vieil homme et la mer", "../Assets/BDD_Images/38_1.png", 22);
-                feature_normal("le vieil homme et la mer", "../Assets/BDD_Images/38_1.png", 22);
-                feature_normal("le vieil homme et la mer", "../Assets/BDD_Images/38_1.png", 22);
-                feature_normal("le vieil homme et la mer", "../Assets/BDD_Images/38_1.png", 22);
-                feature_normal("le vieil homme et la mer", "../Assets/BDD_Images/38_1.png", 22);
-                feature_normal("le vieil homme et la mer", "../Assets/BDD_Images/38_1.png", 22);
+                display_item("Livres", "VenteFlash");
                 ?>
             </div>
         </section>
