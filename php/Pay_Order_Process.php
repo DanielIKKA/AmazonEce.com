@@ -7,7 +7,7 @@
     if(isset($_POST['surname']) AND isset($_POST['firstname']) AND isset($_POST['adress']) AND isset($_POST['city'])and isset($_POST['country']) and isset($_POST['postal_code'])AND isset($_POST['tel']))
     {
         $info_perso = true;
-    }else echo "Il manque des infos personelles";
+    }else echo "Il manque des infos personnelles";
 
     if(isset($_POST['type']) AND isset($_POST['number']) AND isset($_POST['name']) AND isset($_POST['expiracy_date'])and isset($_POST['security_code']))
     {
@@ -18,7 +18,7 @@
     {
         $surname = $_POST['surname'];
         $firstname = $_POST['firstname'];
-        $adress = $_POST['adress'];
+        $street = $_POST['adress'];
         $city = $_POST['city'];
         $country = $_POST['country'];
         $postal_code = $_POST['postal_code'];
@@ -41,6 +41,22 @@
 
         if($db_found)
         {
+           $SQL = "INSERT INTO adress(street,city,country,postal_code) VALUES(\"".$street."\",\"".$city."\",\"".country."\",\"".$postal_code."\")";
+           mysqli_query($db_handle, $SQL);
+
+            $SQL ="SELECT MAX(id) FROM adress";
+            $result = mysqli_query($db_handle, $SQL);
+            if($result)
+            {
+                while($db_field = mysqli_fetch_row($result))
+                {
+                    $id_last_adress = $db_field[0];
+                }
+            }
+
+            $SQL ="UPDATE `user` SET `adress_id` = '12' WHERE `user`.`email` = 'rcender@gmail.com'";
+
+
             $SQL ="SELECT * from payment_info WHERE number=\"" . $number. "\"";
             $result = mysqli_query($db_handle, $SQL);
 

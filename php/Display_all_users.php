@@ -23,7 +23,7 @@
                 remove_user($_GET['email']);
         }
     }
-    
+
     $db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS );
     $database = "amazonece";
     $db_found = mysqli_select_db( $db_handle, $database );
