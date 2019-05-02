@@ -1,6 +1,7 @@
-<?php session_start();
+<?php
+      include "headerTemplate.php";
       include "Fonctions_gestion_users.php";
-      include "headerTemplate.php";?>
+      displayHeader();?>
 <table>
     <tr>
         <th>Type</th>

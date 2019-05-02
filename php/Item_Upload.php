@@ -1,5 +1,6 @@
 <?php
     include "headerTemplate.php";
+    displayHeader();
 
     if(isset($_POST['category']) AND isset($_POST['name']) AND isset($_POST['price']) AND isset($_POST['description']))
     {
