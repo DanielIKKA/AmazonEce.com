@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- import the header template -->
-    <?php headerDisplay(); ?>
+    <?php displayHeader(); ?>
     <!-- main body home page -->
     <main>
         <div class="main_wrapper">

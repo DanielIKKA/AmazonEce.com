@@ -20,7 +20,7 @@
     justify-content: space-evenly;
 }
 
-.item_section:first-child {margin-top: 50px;}
+.item_section_vertical:first-child {margin-top: 50px;}
 #bank_info_section {margin-bottom: 50px;}
 
 #buyer, #seller {margin-left: 10px;}

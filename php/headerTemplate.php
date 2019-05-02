@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="../Css/GeneralStylesheet.css">
 <link rel="stylesheet" type="text/css" href="../Css/HeaderStyleSheet.css">
 <?php
-    function headerDisplay() {
+    function displayHeader() {
         echo
             '<!-- header -->
             <header id="wrapper" class="border">

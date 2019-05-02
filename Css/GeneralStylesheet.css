@@ -35,7 +35,7 @@ main {
     font-weight: 100;
 }
 
-.item_section {
+.item_section_vertical {
     display: flex;
     flex-direction: column;
 }
