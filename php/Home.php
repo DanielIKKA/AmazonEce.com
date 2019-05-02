@@ -13,7 +13,7 @@
     <main>
         <div class="main_wrapper">
             <div class="cat_item" id="cat_item_1">
-                <a href="#" class="pic">
+                <a href="Livres.php" class="pic">
                     <div class="rect_hover cover">
                         <h1>Livres</h1>
                     </div>

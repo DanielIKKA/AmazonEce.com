@@ -7,6 +7,7 @@
 .wrapper_feature {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     width: 250px;
     height: 250px;
@@ -18,6 +19,8 @@
     font-weight: 500;
     font-size: 1.5em;
     text-align: center;
+
+    height: 20px;
 }
 
 .title_feature {
@@ -25,7 +28,7 @@
     font-weight: 100;
     font-size: 1.3em;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .features_scroll {
@@ -34,10 +37,7 @@
     width: 100%;
     overflow-x: scroll ;
 }
-#item1_top {
-    height: 70%;
-}
-#item2 {
-    align-self: center;
-    flex: 1;
+
+.item1 {
+    height: 200px;
 }
