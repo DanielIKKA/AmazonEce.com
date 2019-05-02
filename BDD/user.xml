@@ -5,7 +5,7 @@
 - https://www.phpmyadmin.net
 -
 - Hôte : 127.0.0.1:3306
-- Généré le :  mar. 30 avr. 2019 à 22:45
+- Généré le :  jeu. 02 mai 2019 à 15:50
 - Version du serveur :  5.7.24
 - Version de PHP :  7.2.14
 -->
@@ -21,12 +21,13 @@
                   `type` set('admin','seller','buyer','') NOT NULL,
                   `firstname` varchar(50) NOT NULL,
                   `surname` varchar(50) NOT NULL,
-                  `adress` varchar(50) NOT NULL,
+                  `adress_id` int(10) DEFAULT NULL,
                   `email` varchar(50) NOT NULL,
                   `password` varchar(50) NOT NULL,
                   `tel` int(10) DEFAULT NULL,
                   `photo` varchar(50) DEFAULT NULL,
                   `background` set('wood','wall','leather','none') DEFAULT NULL,
+                  `card_number` varchar(50) DEFAULT NULL,
                   PRIMARY KEY (`email`)
                 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
             </pma:table>
@@ -42,133 +43,133 @@
             <column name="type">admin</column>
             <column name="firstname">Arnaud</column>
             <column name="surname">Emprin</column>
-            <column name="adress">58 rue paul louis courier</column>
+            <column name="adress_id">1</column>
             <column name="email">arnaud.emprin@gmail.com</column>
             <column name="password">root</column>
             <column name="tel">1212</column>
             <column name="photo">NULL</column>
             <column name="background">NULL</column>
+            <column name="card_number">NULL</column>
         </table>
         <table name="user">
             <column name="type">admin</column>
             <column name="firstname">Daniel</column>
             <column name="surname">Ikka</column>
-            <column name="adress">13 rue des nazes</column>
+            <column name="adress_id">2</column>
             <column name="email">daniel.ikka@edu.ece.fr</column>
             <column name="password">root</column>
             <column name="tel">NULL</column>
             <column name="photo">NULL</column>
             <column name="background">NULL</column>
+            <column name="card_number">NULL</column>
         </table>
         <table name="user">
             <column name="type">admin</column>
             <column name="firstname">Ludovic</column>
             <column name="surname">Fritel</column>
-            <column name="adress">15 rue des moches</column>
+            <column name="adress_id">3</column>
             <column name="email">ludo.fritel@edu.ece.fr</column>
             <column name="password">root</column>
             <column name="tel">NULL</column>
             <column name="photo">NULL</column>
             <column name="background">NULL</column>
-        </table>
-        <table name="user">
-            <column name="type">buyer</column>
-            <column name="firstname">Tristan</column>
-            <column name="surname">Germain</column>
-            <column name="adress">3 ruelle pelote</column>
-            <column name="email">tgerard@hotmail.live</column>
-            <column name="password">buy</column>
-            <column name="tel">NULL</column>
-            <column name="photo">tgerard@hotmail.live.jpg</column>
-            <column name="background">wood</column>
+            <column name="card_number">NULL</column>
         </table>
         <table name="user">
             <column name="type">buyer</column>
             <column name="firstname">Samuel</column>
             <column name="surname">Bazo</column>
-            <column name="adress">5 rue lakanal</column>
+            <column name="adress_id">4</column>
             <column name="email">sbazo@yahoo.fr</column>
             <column name="password">buy</column>
             <column name="tel">NULL</column>
             <column name="photo">sbazo@yahoo.fr.jpg</column>
             <column name="background">leather</column>
+            <column name="card_number">NULL</column>
         </table>
         <table name="user">
             <column name="type">buyer</column>
             <column name="firstname">Kim</column>
             <column name="surname">Poll</column>
-            <column name="adress">5 Hemingway str.</column>
+            <column name="adress_id">5</column>
             <column name="email">kpop@vodafone.uk</column>
             <column name="password">buy</column>
             <column name="tel">NULL</column>
             <column name="photo">kpop@vodafone.uk.jpg</column>
             <column name="background">leather</column>
+            <column name="card_number">NULL</column>
         </table>
         <table name="user">
             <column name="type">buyer</column>
             <column name="firstname">Thibaut</column>
             <column name="surname">Quenelle</column>
-            <column name="adress">526 route du sel</column>
+            <column name="adress_id">6</column>
             <column name="email">tiboquenelle@gmail.com</column>
             <column name="password">buy</column>
             <column name="tel">NULL</column>
             <column name="photo">tiboquenelle@gmail.com.jpg</column>
             <column name="background">wall</column>
+            <column name="card_number">NULL</column>
         </table>
         <table name="user">
             <column name="type">seller</column>
             <column name="firstname">Nadia</column>
             <column name="surname">Browska</column>
-            <column name="adress">16 boulevard Napoleon</column>
+            <column name="adress_id">7</column>
             <column name="email">Nbrowska@cyat.ru</column>
             <column name="password">sell</column>
             <column name="tel">NULL</column>
             <column name="photo">Nbrowska@cyat.ru.jpg</column>
             <column name="background">wood</column>
+            <column name="card_number">NULL</column>
         </table>
         <table name="user">
             <column name="type">seller</column>
             <column name="firstname">Paul</column>
             <column name="surname">Lampieu</column>
-            <column name="adress">13 rue du roi</column>
+            <column name="adress_id">8</column>
             <column name="email">LambieuPaul@live.fr</column>
             <column name="password">sell</column>
             <column name="tel">NULL</column>
             <column name="photo">LambieuPaul@live.fr.jpg</column>
             <column name="background">wood</column>
+            <column name="card_number">NULL</column>
         </table>
         <table name="user">
             <column name="type">seller</column>
             <column name="firstname">Roger</column>
             <column name="surname">Beroger</column>
-            <column name="adress">7 rue de la galinette</column>
+            <column name="adress_id">9</column>
             <column name="email">beroger@wanadoo.fr</column>
             <column name="password">sell</column>
             <column name="tel">NULL</column>
             <column name="photo">beroger@wanadoo.fr.jpg</column>
             <column name="background">leather</column>
+            <column name="card_number">NULL</column>
         </table>
         <table name="user">
             <column name="type">seller</column>
             <column name="firstname">Natacha</column>
             <column name="surname">Fiquart</column>
-            <column name="adress">16 rue Flaubert</column>
+            <column name="adress_id">10</column>
             <column name="email">natachaa@gmail.com</column>
             <column name="password">sell</column>
             <column name="tel">NULL</column>
             <column name="photo">natachaa@gmail.com.jpg</column>
             <column name="background">wall</column>
+            <column name="card_number">NULL</column>
         </table>
         <table name="user">
             <column name="type">seller</column>
             <column name="firstname">Remy</column>
             <column name="surname">Cendrer</column>
-            <column name="adress">3 rue centrale</column>
+            <column name="adress_id">12</column>
             <column name="email">rcender@gmail.com</column>
             <column name="password">sell</column>
             <column name="tel">NULL</column>
             <column name="photo">rcender@gmail.com.jpg</column>
             <column name="background">leather</column>
+            <column name="card_number">NULL</column>
         </table>
     </database>
 </pma_xml_export>

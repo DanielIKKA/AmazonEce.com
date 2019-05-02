@@ -12,11 +12,12 @@ function display_item($category, $priority_level) {
         $db_found = mysqli_select_db( $db_handle, $database );
 
         if($db_found) {
-            $querry = "SELECT * FROM item WHERE category=".$category." AND priority_level=".$priority_level;
+            $querry = "SELECT * FROM item WHERE category=\"".$category."\" AND priority_level=\"".$priority_level."\"";
             $result = mysqli_query($db_handle,$querry);
             if($result) {
-                while ($fetch = mysqli_fetch_assoc($result)) {
-                    feature_normal($fetch['name'], "../Assets/BDD_Images/".$fetch['pic1'], $result['price']);
+                while ($fetch = mysqli_fetch_assoc($result))
+                {
+                    feature_normal($fetch['name'], "../Assets/BDD_Images/".$fetch['pic1'], $fetch['price']);
                 }
             }
         }

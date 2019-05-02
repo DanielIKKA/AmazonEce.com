@@ -5,7 +5,7 @@
 - https://www.phpmyadmin.net
 -
 - Hôte : 127.0.0.1:3306
-- Généré le :  mar. 30 avr. 2019 à 22:46
+- Généré le :  jeu. 02 mai 2019 à 15:49
 - Version du serveur :  5.7.24
 - Version de PHP :  7.2.14
 -->
@@ -18,7 +18,7 @@
         <pma:database name="amazonece" collation="utf8_general_ci" charset="utf8">
             <pma:table name="payment_info">
                 CREATE TABLE `payment_info` (
-                  `number` varchar(16) NOT NULL,
+                  `number` varchar(25) NOT NULL,
                   `type` set('Visa','MasterCard','AmericanExpress') NOT NULL,
                   `name` varchar(50) NOT NULL,
                   `expiracy_date` date NOT NULL,
@@ -61,6 +61,13 @@
             <column name="name">Donald Trump</column>
             <column name="expiracy_date">2019-05-09</column>
             <column name="security_code">11</column>
+        </table>
+        <table name="payment_info">
+            <column name="number">4567456745674567</column>
+            <column name="type">Visa</column>
+            <column name="name">Michel Platini</column>
+            <column name="expiracy_date">2019-05-09</column>
+            <column name="security_code">456</column>
         </table>
     </database>
 </pma_xml_export>
