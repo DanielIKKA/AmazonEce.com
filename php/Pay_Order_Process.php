@@ -54,8 +54,8 @@
                 }
             }
 
-            $SQL ="UPDATE `user` SET `adress_id` = '12' WHERE `user`.`email` = 'rcender@gmail.com'";
-
+            $SQL ="UPDATE `user` SET `adress_id` = \"".$id_last_adress."\" WHERE `user`.`email` = \"".$_SESSION['email']."\"";
+            mysqli_query($db_handle,$SQL);
 
             $SQL ="SELECT * from payment_info WHERE number=\"" . $number. "\"";
             $result = mysqli_query($db_handle, $SQL);
@@ -68,7 +68,7 @@
                     echo "Informations bancaires OK<br/>";
                     //A rajouter : email de l'acheteur à recup dans la session
                     //Il faut enlever de la table item les objets achetés à ce moment là
-                    $SQL ="INSERT INTO  purchase(card_number,adress,city,postal_code,contact_number,country,surname,firstname,item_id_list,price) VALUES(\"" . $number ."\",\"" . $adress ."\",\"" . $city ."\",\"" . $postal_code ."\",\"" . $tel ."\",\"" . $country ."\",\"" . $surname ."\",\"" . $firstname ."\",\"" . $item_id_list ."\",\"" . $price ."\")";
+                    $SQL ="INSERT INTO  purchase(card_number,adress_id,city,postal_code,contact_number,country,surname,firstname,item_id_list,price) VALUES(\"" . $number ."\",\"" . $id_last_adress ."\",\"" . $city ."\",\"" . $postal_code ."\",\"" . $tel ."\",\"" . $country ."\",\"" . $surname ."\",\"" . $firstname ."\",\"" . $item_id_list ."\",\"" . $price ."\")";
                     if(mysqli_query($db_handle, $SQL))
                     {
                         echo "Commande enregistrée<br/>";
