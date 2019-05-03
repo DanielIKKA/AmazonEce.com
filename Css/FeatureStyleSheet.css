@@ -41,3 +41,9 @@
 .item1 {
     height: 200px;
 }
+
+.rect_hover {
+    text-decoration: none;
+    width: 250px;
+    height: 250px;
+}

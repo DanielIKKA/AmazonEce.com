@@ -27,6 +27,9 @@ function display_item($category, $priority_level) {
         echo " 
             <div id='wrapper_template'>
                 <div class='wrapper_feature'>
+                    <a class='rect_hover' href='#'>
+                        <h1>Voir</h1>
+                    </a>
                     <img class='contain item1' src='$pic1' alt=''>
                     <h1 class='price_feature'>$price</h1>            
                 </div>
