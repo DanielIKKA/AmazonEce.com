@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -52,7 +53,7 @@
                     <div class="field_margin" id="adress_group">
                         <input class="input_text" type="number" name="postal_code" id="postal_code" placeholder="code postal">
                         <input class="input_text" type="text" name="city" id="city" placeholder="ville">
-                        <input class="input_text" type="text" name="country" id="country" placeholder="pays">
+                        <?php include "Country_list.php";?>
                     </div>
                 </section>
 

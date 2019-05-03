@@ -111,17 +111,12 @@
                 if(mysqli_query($db_handle, $SQL))
                 {
                     echo "<h1 class=\"sign_in_title\">Inscription réussie</h1>";
-
-                    if(!isset($_SESSION['type']))
-                    {
-                        $_SESSION['user']['email'] = $email;
-                        $_SESSION['user']['type'] = $user_type;
-                        $_SESSION['user']['surname'] = $surname;
-                        $_SESSION['user']['firstname'] = $firstname;
-                        $_SESSION['user']['background'] =  $background;
-                    }
-
-
+                    $_SESSION['user']= array();
+                    $_SESSION['user']['email'] = $email;
+                    $_SESSION['user']['type'] = $user_type;
+                    $_SESSION['user']['surname'] = $surname;
+                    $_SESSION['user']['firstname'] = $firstname;
+                    $_SESSION['user']['background'] =  $background;
 
                     //upload de la photo
                     if (file_exists($_FILES['photo']['tmp_name']) || is_uploaded_file($_FILES['photo']['tmp_name']))
@@ -145,10 +140,10 @@
                                 $SQL = ("UPDATE user SET photo=\"" .$fichier. "\" WHERE user.email=\"" .$email. "\"");
                                 if(!mysqli_query($db_handle, $SQL))
                                 {
-                                    echo "Echec de l'upload 1 <br/>".$SQL;
+                                    echo "Echec de l'upload de la photo<br/>".$SQL;
                                 }
                             }else
-                                echo "Echec de l'upload 2 <br/>" ;
+                                echo "Echec de l'upload de la photo<br/>" ;
                         }
                     }else echo "Echec de l'ajout de l'image : fichier non trouvé<br/>";
                 }
@@ -175,5 +170,4 @@
         </div>
     </div>
 </main>
-<?php
-    include "footerTemplate.php";
+<?php include "footerTemplate.php";
