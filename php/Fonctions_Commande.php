@@ -1,6 +1,5 @@
 <?php
     include "FeatureTemplate.php";
-    require '../../../config.php';
 
     function total_display($id)
     {

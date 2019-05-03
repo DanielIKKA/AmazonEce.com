@@ -16,7 +16,7 @@
     <div class="main_wrapper">
         <div class="sign_in">
 <?php
-    if(isset($_POST['surname']) AND isset($_POST['firstname']) AND isset($_POST['email'])and isset($_POST['password']) and isset($_POST['password_confirm'])AND isset($_POST['user_type'])and isset($_POST['background']))
+    if(isset($_POST['surname']) AND isset($_POST['firstname']) AND isset($_POST['email'])and isset($_POST['password']) and isset($_POST['password_confirm'])AND isset($_POST['user_type'])and isset($_POST['background']) and isset($_POST['tel']))
     {
         $adress_info = false;
         $bank_info = false;
