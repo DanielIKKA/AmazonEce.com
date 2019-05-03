@@ -1,0 +1,24 @@
+#section_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#section_wrapper img {
+    /* code permettant de faire un rond
+       source: https://stackoverflow.com/questions/8473443/center-an-image-in-a-css-circle
+    */
+    display: block;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+
+    overflow: hidden;
+
+    align-self: center;
+    margin: 5px 10px;
+}
