@@ -68,6 +68,11 @@ header {
     font-size: 0.7em;
     font-weight: 100;
     text-align: center;
+    text-decoration: none;
+}
+#icon_about:visited, #icon_profil:visited {
+    text-decoration: none;
+    color: var(--main-gray);
 }
 
 #icons img { align-self: center; width: 60%; height: 60% }
@@ -90,6 +95,7 @@ header {
 
     fill: var(--main-color);
     color: var(--main-color);
+    text-decoration: none;
     height: 60%;
     width: 20%;
 
@@ -105,7 +111,6 @@ header {
     background-color: var(--main-color);
 }
 #icon_cart {
-    height: 100%;
     width: 40%;
     margin-left: 5%;
 }
