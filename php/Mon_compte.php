@@ -93,7 +93,7 @@ echo "<form method='post' action=''><input type='submit' value='Modifier'></form
 </section>
 
 <?php
-function display_seller()
+function display_purchase()
 {
     echo "<hr class=\"horizontal_separator_item\"/>";
     echo "<section class=item_section_vertical>";
@@ -113,11 +113,15 @@ function display_seller()
     echo "</section>";
 }
 
+function display_seller()
+{
+
+}
 
 
 function display_admin()
 {
-    display_seller();
+    display_purchase();
     echo "<hr class=\"horizontal_separator_item\"/>";
     echo "<section class=item_section_vertical>";
     echo "<h1 class='title_section'>Administrateur</h1>";

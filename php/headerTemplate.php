@@ -1,7 +1,9 @@
 <link rel="stylesheet" type="text/css" href="../Css/GeneralStylesheet.css">
 <link rel="stylesheet" type="text/css" href="../Css/HeaderStyleSheet.css">
 <?php
-    function displayHeader() {
+
+    function set_background()
+    {
         if(isset($_SESSION['user']['background'])) {
             $backgroundValue = $_SESSION['user']['background'];
             switch ($backgroundValue) {
@@ -27,6 +29,10 @@
                     break;
             }
         }
+    }
+    function displayHeader() {
+
+        set_background();
         echo
 
 

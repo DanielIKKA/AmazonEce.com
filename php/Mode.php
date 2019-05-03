@@ -1,8 +1,9 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title> Livres </title>
+    <title> Mode </title>
     <?php include("headerTemplate.php"); ?>
     <?php include("FeatureTemplate.php"); ?>
 </head>
@@ -36,7 +37,7 @@
             <h1 class="title_section important_text">Vente Flash</h1>
             <div class="features_scroll">
                 <?php
-                display_item("Vetement", "VenteFlash");
+                display_item("Vetements", "VenteFlash");
                 ?>
             </div>
         </section>
@@ -47,7 +48,7 @@
             <h1 class="title_section">Top Ventes</h1>
             <div class="features_scroll">
                 <?php
-                display_item("Vetement", "TopVente");
+                display_item("Vetements", "TopVente");
                 ?>
             </div>
         </section>
@@ -58,7 +59,7 @@
             <h1 class="title_section">Notre Selection</h1>
             <div class="features_scroll">
                 <?php
-                display_item("Vetement", "NotreSelection");
+                display_item("Vetements", "NotreSelection");
                 ?>
             </div>
         </section>
