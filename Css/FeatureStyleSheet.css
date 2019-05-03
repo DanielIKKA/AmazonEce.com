@@ -45,6 +45,11 @@
     justify-content: center;
     align-items: center;
     height: 70px;
+    margin-top: 15px;
+}
+
+#notre_selection {
+    margin-bottom: 15px;
 }
 
 .svg_title {
