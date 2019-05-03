@@ -2,7 +2,34 @@
 <link rel="stylesheet" type="text/css" href="../Css/HeaderStyleSheet.css">
 <?php
     function displayHeader() {
+        if(isset($_SESSION['user']['background'])) {
+            $backgroundValue = $_SESSION['user']['background'];
+            switch ($backgroundValue) {
+                case "wood":
+                    echo '<style>
+                             main { background-image: url("../Assets/WebSiteResources/images/wood_bg.jpg")}
+                          </style>';
+                    break;
+                case "wall":
+                    echo '<style>
+                             main { background-image: url("../Assets/WebSiteResources/images/jerusalemWall_bg.jpg")}
+                          </style>';
+                    break;
+                case "leather":
+                    echo '<style>
+                             main { background-image: url("../Assets/WebSiteResources/images/leather_bg.jpg")}
+                          </style>';
+                    break;
+                case "none":
+                    echo '<style>
+                             main { background-image: none; }
+                          </style>';
+                    break;
+            }
+        }
         echo
+
+
             '<!-- header -->
             <header id="wrapper" class="border">
                 <div id="top_header">
