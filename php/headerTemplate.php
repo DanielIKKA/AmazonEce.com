@@ -83,11 +83,11 @@
             
                 <div id="wrapper_bottom_header">
                     <div class="item_bottom" id="item1_bottom"><a href="Home.php">Accueil</a></div>
-                    <div class="item_bottom" id="item2_bottom"><a href="#">Ventes Flash</a></div>
+                    <div class="item_bottom" id="item2_bottom"><a href="VentesFlash.php">Ventes Flash</a></div>
                     <div class="item_bottom" id="item3_bottom"><a href="Livres.php">Livres</a></div>
-                    <div class="item_bottom" id="item4_bottom"><a href="#">Musiques</a></div>
-                    <div class="item_bottom" id="item5_bottom"><a href="#">Sport & Loisirs</a></div>
-                    <div class="item_bottom" id="item6_bottom"><a href="#">Vêtements</a></div>
+                    <div class="item_bottom" id="item4_bottom"><a href="Musique.php">Musique</a></div>
+                    <div class="item_bottom" id="item5_bottom"><a href="Sport&Loisirs.php">Sport & Loisirs</a></div>
+                    <div class="item_bottom" id="item6_bottom"><a href="Mode.php">Mode</a></div>
                 </div>
             </header>';
     }
