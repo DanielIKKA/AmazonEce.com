@@ -20,6 +20,7 @@
         {
             Case "remove_user" :
                 remove_user($_GET['email']);
+                break;
         }
     }
 
@@ -39,10 +40,13 @@
                        <td>".$db_field['surname']."</td>
                        <td>".$db_field['email']."</td>
                        <td><img width='50' height='50' src=\"../Assets/Users_photo/".$db_field['photo']."\"></td>";
-                    //if admin pas possible de supprimer
-            echo "<td><a href=\"Display_all_users.php?action=remove_user&amp;email=".$db_field['email']."\">Supprimer</td>";
+                    if($db_field['type'] != 'admin')
+                    {
+                        echo "<td><a href=\"Display_all_users.php?action=remove_user&amp;email=".$db_field['email']."\">Supprimer</td>";
+                    }
             echo "</tr>";
         }
+        echo "<form method='post' action='inscription.php'><input type='submit' value='Ajouter un profil'></form>";
     }
     ?>
 </table>

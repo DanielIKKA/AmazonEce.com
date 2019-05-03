@@ -1,6 +1,7 @@
 <?php
     include "headerTemplate.php";
     displayHeader();
+    include "fonctions_admin.php";
     ?>
 
 <table>
@@ -17,7 +18,16 @@
 
 <?php
 
-    require '../../../config.php';
+    if(isset($_GET['action']))
+    {
+        switch ($_GET['action'])
+        {
+            Case "remove_user" :
+                remove_item($_GET['id']);
+                break;
+        }
+    }
+
     $db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS );
     $database = "amazonece";
     $db_found = mysqli_select_db( $db_handle, $database );
@@ -34,10 +44,12 @@
                        <td><img width='100' height='100' src=\"../Assets/BDD_Images/".$db_field['pic1']."\"></td>
                        <td>".$db_field['description']."</td>
                        <td>".$db_field['price']."€"."</td>
-                       <td>".$db_field['category']."</td>
-                       <td><a href=\"panier.php?action=add&amp;id=".$db_field['id']."\">Ajouter au panier</a></td>
+                       <td>".$db_field['category']."</td>";
+                       //<td><a href=\"panier.php?action=add&amp;id=".$db_field['id']."\">Ajouter au panier</a></td>
+                   echo"<td><a href=\"Display_all_items.php?action=remove_item&amp;id=".$db_field['id']."\">Supprimer</a></td>
                   </tr>";
         }
+        echo "<form method='post' action='Sell_Item_Form.php'><input type='submit' value='Ajouter un objet'></form>";
     }
     ?>
 </table>

@@ -1,7 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title> Crée un compte </title>
+    <?php include ("headerTemplate.php") ; ?>
+    <link rel="stylesheet" type="text/css" href="../Css/InscriptionStylesheet.css">
+</head>
+<body>
+<!-- import the header template -->
+<?php displayHeader(); ?>
+
+<!-- main body home page -->
+<main>
+    <div class="main_wrapper">
+        <div class="sign_in">
 <?php
-    echo"<link rel='stylesheet' type='text/css' href='../Css/GeneralStylesheet.css'>";
-    include "headerTemplate.php";
-    displayHeader();
     if(isset($_POST['surname']) AND isset($_POST['firstname']) AND isset($_POST['email'])and isset($_POST['password']) and isset($_POST['password_confirm'])AND isset($_POST['user_type'])and isset($_POST['background']))
     {
         $adress_info = false;
@@ -95,12 +108,16 @@
 
                 if(mysqli_query($db_handle, $SQL))
                 {
-                    echo "Ajout à la base de donnée OK<br/>";
+                    echo "<h1 class=\"sign_in_title\">Inscription réussie</h1>";
 
-                    $_SESSION['email'] = $email;
-                    $_SESSION['type'] = $user_type;
-                    $_SESSION['surname'] = $surname;
-                    $_SESSION['firstname'] = $firstname;
+                    if(!isset($_SESSION['type']))
+                    {
+                        $_SESSION['email'] = $email;
+                        $_SESSION['type'] = $user_type;
+                        $_SESSION['surname'] = $surname;
+                        $_SESSION['firstname'] = $firstname;
+                    }
+
 
 
                     //upload de la photo
@@ -123,10 +140,7 @@
                             {
 
                                 $SQL = ("UPDATE user SET photo=\"" .$fichier. "\" WHERE user.email=\"" .$email. "\"");
-                                if(mysqli_query($db_handle, $SQL))
-                                {
-                                    echo "Telechargement de l'image OK";
-                                }else
+                                if(!mysqli_query($db_handle, $SQL))
                                 {
                                     echo "Echec de l'upload 1 <br/>".$SQL;
                                 }
@@ -137,7 +151,7 @@
                 }
                 else
                 {
-                    echo "echec de l'inscription<br/>";
+                    echo "<h1>echec de l'inscription</h1><br/>";
                     echo $SQL."<br/>";
                     echo mysqli_error($db_handle);
                 }
@@ -154,5 +168,9 @@
     {
         echo "Veuillez remplir tous les champs";
     }
-
+    ?>
+        </div>
+    </div>
+</main>
+<?php
     include "footerTemplate.php";
