@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,8 +9,9 @@
 </head>
 <body>
     <!-- import the header template -->
-    <?php displayHeader(); ?>
+    <?php displayHeader();?>
     <!-- main body home page -->
+
     <main>
         <div class="main_wrapper">
             <div class="cat_item" id="cat_item_1">

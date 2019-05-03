@@ -1,6 +1,6 @@
 <?php
       include "headerTemplate.php";
-      include "Fonctions_gestion_users.php";
+      include "fonctions_admin.php";
       displayHeader();?>
 <table>
     <tr>
@@ -8,10 +8,7 @@
         <th>Prenom</th>
         <th>Nom</th>
         <th>Email</th>
-        <th>Adresse</th>
-        <th>Téléphone</th>
         <th>Photo</th>
-        <th>Background</th>
     </tr>
 
 
@@ -23,6 +20,7 @@
         {
             Case "remove_user" :
                 remove_user($_GET['email']);
+                break;
         }
     }
 
@@ -41,14 +39,14 @@
                        <td>".$db_field['firstname']."</td>
                        <td>".$db_field['surname']."</td>
                        <td>".$db_field['email']."</td>
-                       <td>".$db_field['adress']."</td>
-                       <td>".$db_field['tel']."</td>
-                       <td><img width='50' height='50' src=\"../Assets/Users_photo/".$db_field['photo']."\"></td>
-                       <td>".$db_field['background']."</td>";
-                        //if($_SESSION['type'] == admin)
-            echo "<td><a href=\"Display_all_users.php?action=remove_user&amp;email=".$db_field['email']."\">Supprimer</td>";
+                       <td><img width='50' height='50' src=\"../Assets/Users_photo/".$db_field['photo']."\"></td>";
+                    if($db_field['type'] != 'admin')
+                    {
+                        echo "<td><a class='input_btn cover' href=\"Display_all_users.php?action=remove_user&amp;email=".$db_field['email']."\">Supprimer</td>";
+                    }
             echo "</tr>";
         }
+        echo "<form method='post' action='inscription.php'><input type='submit' value='Ajouter un profil'></form>";
     }
     ?>
 </table>

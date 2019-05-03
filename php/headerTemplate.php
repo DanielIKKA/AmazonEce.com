@@ -26,22 +26,22 @@
                     </div>
             
                     <div id="item2_top" class="item_top">
-                        <img class="contain" src="../Assets/WebSiteResources/header/Logo.png" alt="logo du site">
+                        <a href="Home.php"><img class="contain" src="../Assets/WebSiteResources/header/Logo.png" alt="logo du site"></a>
                     </div>
             
                     <div id="item3_top" class="item_top">
                         <div id="icons">
-                            <div class="pointer" id="icon_profil">
+                            <a class="pointer" id="icon_profil" href="Mon_compte.php">
                                 <img class="contain" src="../Assets/WebSiteResources/header/My_account_icon.png" alt="profil icon">
                                 <p>Mon compte</p>
-                            </div>
+                            </a>
                             <div class="pointer" id="icon_about">
                                 <img class="contain" src="../Assets/WebSiteResources/header/About_us_icon.png" alt="abous us icon">
                                 <p>A propos de nous</p>
                             </div>
                         </div>
                         <hr id="separator_vertical">
-                            <div id="cart" class="pointer">
+                            <a id="cart" class="pointer" href="panier.php">
                                 <div id="icon_cart">
                                     <svg class="contain" height="467pt" viewBox="-4 0 467 467.1" width="467pt" xmlns="http://www.w3.org/2000/svg">
                                         <path d="m8.050781 99.480469h56.058594c13.589844 0 25.089844 10.378906 27.34375
@@ -75,7 +75,7 @@
                                     </svg>
                                 </div>
                                 <h1> panier </h1>
-                            </div>
+                            </a>
                     </div>
                 </div>
             

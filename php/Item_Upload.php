@@ -1,5 +1,6 @@
 <?php
     include "headerTemplate.php";
+    include "Fonctions_Commande.php";
     displayHeader();
 
     if(isset($_POST['category']) AND isset($_POST['name']) AND isset($_POST['price']) AND isset($_POST['description']))
@@ -37,16 +38,16 @@
         if($db_found)
         {
 
-            //$seller_id = $_SESSION["user_id"];
+            $seller_email = $_SESSION['user']["email"];
             if(!isset($_POST['author']) and !isset($_POST['gender']) and !isset($_POST['size']))
-                $SQL = "INSERT INTO item(seller_email, name, description, price, category) VALUES(\"Prout@gmail.com\",\"" . $name . "\", \"" . $description . "\",\"" . $price . "\",\"" . $category . "\")";
+                $SQL = "INSERT INTO item(seller_email, name, description, price, category) VALUES(\"".$seller_email."\",\"" . $name . "\", \"" . $description . "\",\"" . $price . "\",\"" . $category . "\")";
             else if(isset($_POST['author']))
             {
-                $SQL = "INSERT INTO item(seller_email, name, description, price, category,author) VALUES(\"Prout@gmail.com\",\"" . $name . "\", \"" . $description . "\",\"" . $price . "\",\"" . $category . "\",\"" . $_POST['author'] . "\")";
+                $SQL = "INSERT INTO item(seller_email, name, description, price, category,author) VALUES(\"".$seller_email."\",\"" . $name . "\", \"" . $description . "\",\"" . $price . "\",\"" . $category . "\",\"" . $_POST['author'] . "\")";
             }
             else if(isset($_POST['size']) and isset($_POST['gender']))
             {
-                $SQL = "INSERT INTO item(seller_email, name, description, price, category,gender,size) VALUES(\"Prout@gmail.com\",\"" . $name . "\", \"" . $description . "\",\"" . $price . "\",\"" . $category . "\",\"" . $_POST['gender'] . "\",\"" . $_POST['size'] . "\")";
+                $SQL = "INSERT INTO item(seller_email, name, description, price, category,gender,size) VALUES(\"".$seller_email."\",\"" . $name . "\", \"" . $description . "\",\"" . $price . "\",\"" . $category . "\",\"" . $_POST['gender'] . "\",\"" . $_POST['size'] . "\")";
             }
 
 
