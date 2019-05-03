@@ -1,3 +1,6 @@
+<?php session_start();
+      include "headerTemplate.php";
+      displayHeader();?>
 <div class="payment">
     <form method="post" action="Pay_Order_Process.php">
         Informations personnelles de livraison<br/>

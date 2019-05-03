@@ -1,6 +1,7 @@
 <?php
     session_start();
     include "Fonctions_panier.php";
+    include "Fonctions_Commande.php";
     $info_bank = false;
     $info_perso = false;
 
@@ -65,22 +66,29 @@
 
                 if($db_field['type'] == $type and $db_field['name'] == $name and $db_field['expiracy_date'] == $expiracy_date and $db_field['security_code'] == $security_code)
                 {
-                    echo "Informations bancaires OK<br/>";
-                    //A rajouter : email de l'acheteur à recup dans la session
+                    $seller_email = $_SESSION['user']['email'];
                     //Il faut enlever de la table item les objets achetés à ce moment là
-                    $SQL ="INSERT INTO  purchase(card_number,adress_id,city,postal_code,contact_number,country,surname,firstname,item_id_list,price) VALUES(\"" . $number ."\",\"" . $id_last_adress ."\",\"" . $city ."\",\"" . $postal_code ."\",\"" . $tel ."\",\"" . $country ."\",\"" . $surname ."\",\"" . $firstname ."\",\"" . $item_id_list ."\",\"" . $price ."\")";
+                    $SQL ="INSERT INTO  purchase(seller_email,card_number,adress_id,city,postal_code,contact_number,country,surname,firstname,item_id_list,price) VALUES(\"" . $seller_email ."\",\"" . $number ."\",\"" . $id_last_adress ."\",\"" . $city ."\",\"" . $postal_code ."\",\"" . $tel ."\",\"" . $country ."\",\"" . $surname ."\",\"" . $firstname ."\",\"" . $item_id_list ."\",\"" . $price ."\")";
                     if(mysqli_query($db_handle, $SQL))
                     {
-                        echo "Commande enregistrée<br/>";
-                        //On peut vider le panier
                         clear_cart();
                     }
-                    else echo "echec de la requete : ".$SQL ."<br/>Erreur :" . mysqli_error($db_handle);
                 }
                 else
                 {
                     echo "Informations bancaires erronées<br/>" ;
                 }
+            }
+
+            $SQL ="SELECT MAX(id) FROM purchase";
+            $result = mysqli_query($db_handle, $SQL);
+            if($result)
+            {
+                while($db_field = mysqli_fetch_row($result))
+                {
+                    $id_last_purchase = $db_field[0];
+                }
+                total_display($id_last_purchase);
             }
         }
     }
