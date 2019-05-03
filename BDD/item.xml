@@ -5,7 +5,7 @@
 - https://www.phpmyadmin.net
 -
 - Hôte : 127.0.0.1:3306
-- Généré le :  jeu. 02 mai 2019 à 15:49
+- Généré le :  ven. 03 mai 2019 à 13:28
 - Version du serveur :  5.7.24
 - Version de PHP :  7.2.14
 -->
@@ -33,7 +33,7 @@
                   `category` set('Livres','Musique','Vetements','Sports et Loisirs') NOT NULL,
                   `priority_level` set('TopVente','VenteFlash','NotreSelection') DEFAULT NULL,
                   PRIMARY KEY (`id`)
-                ) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+                ) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
             </pma:table>
         </pma:database>
     </pma:structure_schemas>
@@ -162,7 +162,7 @@
             <column name="pic1">33_1.png</column>
             <column name="pic2">NULL</column>
             <column name="pic3">NULL</column>
-            <column name="description">Piscine Ã  boule pour jouer pendant des heures sans se faire mal</column>
+            <column name="description">Piscine a  boule pour jouer pendant des heures sans se faire mal</column>
             <column name="video">NULL</column>
             <column name="price">50</column>
             <column name="gender">NULL</column>
@@ -249,6 +249,413 @@
             <column name="size">NULL</column>
             <column name="author"></column>
             <column name="category">Musique</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">41</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Bonnet Gris</column>
+            <column name="pic1">41_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Jolie bonnet a la mode pour se couvrir la tete en hivers</column>
+            <column name="video">NULL</column>
+            <column name="price">25</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Vetements</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">42</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Cable RCA</column>
+            <column name="pic1">42_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Cable de musique a  entree RCA</column>
+            <column name="video">NULL</column>
+            <column name="price">15</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Musique</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">43</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Enceinte Marshall</column>
+            <column name="pic1">43_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Enceinte de la marque Marshall 
+20 Kw
+Parfait pour faire la fÃªte</column>
+            <column name="video">NULL</column>
+            <column name="price">175</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author"></column>
+            <column name="category">Musique</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">44</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Le Trone de Fer</column>
+            <column name="pic1">44_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Premier tome de la saga culte Game Of Thrones</column>
+            <column name="video">NULL</column>
+            <column name="price">20</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">George R.R Martin</column>
+            <column name="category">Livres</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">45</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Las Vegas Parano</column>
+            <column name="pic1">45_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Road Trip avec Johnny Depp</column>
+            <column name="video">NULL</column>
+            <column name="price">22</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Hunter S. Thompson</column>
+            <column name="category">Livres</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">46</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Trotinette</column>
+            <column name="pic1">46_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Super trotinette pour vous rendre sur votre lieu de travail</column>
+            <column name="video">NULL</column>
+            <column name="price">50</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Hunter S. Thompson</column>
+            <column name="category">Sports et Loisirs</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">47</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Les Piliers de la Terre</column>
+            <column name="pic1">47_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Premier tome de la trilogie de Ken Follet</column>
+            <column name="video">NULL</column>
+            <column name="price">22</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Livres</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">48</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Un monde sans fin</column>
+            <column name="pic1">48_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Deuxieme tome de la trilogie de Ken Follet</column>
+            <column name="video">NULL</column>
+            <column name="price">24</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Livres</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">49</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">La colonne de feu</column>
+            <column name="pic1">49_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Troisieme tome de la trilogie de Ken Follet</column>
+            <column name="video">NULL</column>
+            <column name="price">21</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Livres</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">50</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Coffret Ken Follet</column>
+            <column name="pic1">50_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Coffret de la saga des Piliers de La Terre de Ken Follet</column>
+            <column name="video">NULL</column>
+            <column name="price">35</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Livres</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">51</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Coffret Trilogie du Siecle</column>
+            <column name="pic1">51_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Trilogie du Siecle de Ken Follet contenant les trois tomes cultes </column>
+            <column name="video">NULL</column>
+            <column name="price">35</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Livres</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">52</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">GameBoy Color</column>
+            <column name="pic1">52_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">GameBoy Color Pikachu Collector !</column>
+            <column name="video">NULL</column>
+            <column name="price">50</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Sports et Loisirs</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">53</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Jouet de Bain</column>
+            <column name="pic1">53_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Super bateau pompier pour jouer dans son bain</column>
+            <column name="video">NULL</column>
+            <column name="price">30</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Sports et Loisirs</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">54</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Peluche Pokemon</column>
+            <column name="pic1">54_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Super peluche Pikachu ! 100% coton </column>
+            <column name="video">NULL</column>
+            <column name="price">30</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Sports et Loisirs</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">55</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Twerk Pong</column>
+            <column name="pic1">55_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Nouveau jeux pour mettre de l'ambiance Ã  vos aperos ! 
+</column>
+            <column name="video">NULL</column>
+            <column name="price">31</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Sports et Loisirs</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">56</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Yo-Yo</column>
+            <column name="pic1">56_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Authentique Yo-Yo fabrique a  la main par les inuits.  
+</column>
+            <column name="video">NULL</column>
+            <column name="price">12</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Sports et Loisirs</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">57</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">L.A Woman </column>
+            <column name="pic1">57_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Vinyle 33 tours de l'album L.A Woman du groupe The Doors 
+</column>
+            <column name="video">NULL</column>
+            <column name="price">25</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Musique</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">58</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">45 tours Led Zeppelin</column>
+            <column name="pic1">58_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Vinyle 45 tours du groupe Britannique  Led Zeppelin 
+</column>
+            <column name="video">NULL</column>
+            <column name="price">21</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Musique</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">59</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Vinyle des Rolling Stones</column>
+            <column name="pic1">59_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Vinyle 45 tours des Stone
+La face A contient le single Satisfaction et la face B le morceau Miss You</column>
+            <column name="video">NULL</column>
+            <column name="price">18</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Musique</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">60</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">The Velvet Underground</column>
+            <column name="pic1">60_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Mythique album des Velvet Underground avec la pochette dessinÃ© par Andy Warhol </column>
+            <column name="video">NULL</column>
+            <column name="price">18</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Musique</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">61</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Jean Uniqlo</column>
+            <column name="pic1">61_1.jpg</column>
+            <column name="pic2">61_2.jpg</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Jean Regular Fit</column>
+            <column name="video">NULL</column>
+            <column name="price">42</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Vetements</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">62</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">Pull Uniqlo</column>
+            <column name="pic1">62_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">Pull Homme Uniqlo bleu marine</column>
+            <column name="video">NULL</column>
+            <column name="price">32</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Vetements</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">63</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">T-shirt blanc Uniqlo</column>
+            <column name="pic1">63_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">T-shirt femme Uniqlo blanc </column>
+            <column name="video">NULL</column>
+            <column name="price">14</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Vetements</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">64</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">T-shirt gris Uniqlo</column>
+            <column name="pic1">64_1.jpg</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">T-shirt femme Uniqlo gris</column>
+            <column name="video">NULL</column>
+            <column name="price">14</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Vetements</column>
+            <column name="priority_level">NULL</column>
+        </table>
+        <table name="item">
+            <column name="id">65</column>
+            <column name="seller_email">Prout@gmail.com</column>
+            <column name="name">T-shirt Homme Uniqlo</column>
+            <column name="pic1">65_1.png</column>
+            <column name="pic2">NULL</column>
+            <column name="pic3">NULL</column>
+            <column name="description">T-shirt Homme Uniqlo gris</column>
+            <column name="video">NULL</column>
+            <column name="price">14</column>
+            <column name="gender">NULL</column>
+            <column name="size">NULL</column>
+            <column name="author">Ken Follet</column>
+            <column name="category">Vetements</column>
             <column name="priority_level">NULL</column>
         </table>
     </database>
