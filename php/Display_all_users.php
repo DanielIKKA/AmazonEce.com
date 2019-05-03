@@ -42,7 +42,7 @@
                        <td><img width='50' height='50' src=\"../Assets/Users_photo/".$db_field['photo']."\"></td>";
                     if($db_field['type'] != 'admin')
                     {
-                        echo "<td><a href=\"Display_all_users.php?action=remove_user&amp;email=".$db_field['email']."\">Supprimer</td>";
+                        echo "<td><a class='input_btn cover' href=\"Display_all_users.php?action=remove_user&amp;email=".$db_field['email']."\">Supprimer</td>";
                     }
             echo "</tr>";
         }

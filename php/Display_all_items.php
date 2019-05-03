@@ -46,7 +46,7 @@
                        <td>".$db_field['price']."€"."</td>
                        <td>".$db_field['category']."</td>";
                        //<td><a href=\"panier.php?action=add&amp;id=".$db_field['id']."\">Ajouter au panier</a></td>
-                   echo"<td><a href=\"Display_all_items.php?action=remove_item&amp;id=".$db_field['id']."\">Supprimer</a></td>
+                   echo"<td><a class='input_btn cover' href=\"Display_all_items.php?action=remove_item&amp;id=".$db_field['id']."\">Supprimer</a></td>
                   </tr>";
         }
         echo "<form method='post' action='Sell_Item_Form.php'><input type='submit' value='Ajouter un objet'></form>";

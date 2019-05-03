@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -40,8 +41,11 @@
                     {
                         echo "<h1>Connexion réussie</h1>";
                         echo "<h1>Bienvenue, ".$db_field['firstname'].". Content de vous revoir !</h1>";
-                        $_SESSION['email']= $_POST['email'];
-                        $_SESSION['type']= $db_field['type'];
+                        $_SESSION['user']= array();
+                        $_SESSION['user']['email'] = $db_field['email'];
+                        $_SESSION['user']['type']= $db_field['type'];
+                        $_SESSION['user']['surname'] = $db_field['surname'];
+                        $_SESSION['user']['firstname'] = $db_field['firstname'];
                     }
                     else
                     {

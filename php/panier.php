@@ -7,8 +7,6 @@
     if(isset($_GET['action']))
         $action = $_GET['action'];
 
-    if(!in_array($action,array('add', 'delete', 'add_quantity','remove_quantity')))
-        $erreur=true;
 
     if(isset($_GET['id']))
         $id = $_GET['id'];
@@ -34,7 +32,7 @@
                             $price = $db_field['price'];
                             $name = $db_field['name'];
                             $description = $db_field['description'];
-                            $photo = $db_field['pic1'];
+                            $photo = $db_field['pic1    '];
 
                         }
                     }else echo $SQL;

@@ -112,10 +112,10 @@
 
                     if(!isset($_SESSION['type']))
                     {
-                        $_SESSION['email'] = $email;
-                        $_SESSION['type'] = $user_type;
-                        $_SESSION['surname'] = $surname;
-                        $_SESSION['firstname'] = $firstname;
+                        $_SESSION['user']['email'] = $email;
+                        $_SESSION['user']['type'] = $user_type;
+                        $_SESSION['user']['surname'] = $surname;
+                        $_SESSION['user']['firstname'] = $firstname;
                     }
 
 
