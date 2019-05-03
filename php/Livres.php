@@ -33,7 +33,7 @@
         </div>
 
         <section class="item_section_vertical" id="vente_flash">
-            <h1 class="title_section important_text">Vente Flash</h1>
+            <h1 class="title_section"><span class="important_text"> Vente Flash</span></h1>
             <div class="features_scroll">
                 <?php
                     display_item("Livres", "VenteFlash");
