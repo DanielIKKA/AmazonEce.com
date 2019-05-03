@@ -26,6 +26,7 @@
             $email = $_POST['email'];
             $password = $_POST['password'];
             $user_type = $_POST['user_type'];
+            $background = $_POST['background'];
 
             if(isset($_POST['street'])and isset($_POST['postal_code'])and isset($_POST['city'])and isset($_POST['country']))
             {
@@ -116,6 +117,7 @@
                         $_SESSION['user']['type'] = $user_type;
                         $_SESSION['user']['surname'] = $surname;
                         $_SESSION['user']['firstname'] = $firstname;
+                        $_SESSION['user']['background'] =  $background;
                     }
 
 

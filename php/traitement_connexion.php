@@ -46,6 +46,7 @@
                         $_SESSION['user']['type']= $db_field['type'];
                         $_SESSION['user']['surname'] = $db_field['surname'];
                         $_SESSION['user']['firstname'] = $db_field['firstname'];
+                        $_SESSION['user']['background'] = db_field['background'];
                     }
                     else
                     {
