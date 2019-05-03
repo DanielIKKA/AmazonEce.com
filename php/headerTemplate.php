@@ -1,6 +1,14 @@
 <link rel="stylesheet" type="text/css" href="../Css/GeneralStylesheet.css">
 <link rel="stylesheet" type="text/css" href="../Css/HeaderStyleSheet.css">
 <?php
+    if($_SERVER['REQUEST_URI'] != "/Amazonece.com/php/connexion.php" and $_SERVER['REQUEST_URI'] != "/Amazonece.com/php/traitement_connexion.php")
+    {
+        if(!isset($_SESSION['user']))
+        {
+            header("Location:connexion.php");
+            exit;
+        }
+    }
 
     function set_background()
     {
