@@ -1,6 +1,9 @@
 <?php
     session_start();
+    include "headerTemplate.php";
+    displayHeader();
     include "Fonctions_panier.php";
+    include "FeatureTemplate.php";
 
     $erreur = false;
 
@@ -76,16 +79,12 @@
         {
             for ($i=0 ;$i < $nbArticles ; $i++)
             {
-                echo "<tr>";
-                echo "<td>".$_SESSION['panier']['name'][$i]."</td>";
-                echo "<td><img width='100' height='100' src=\"../Assets/BDD_Images/".$_SESSION['panier']['photo'][$i]."\"></td>";
-                echo "<td>".$_SESSION['panier']['description'][$i]."</td>";
-                echo "<td>".$_SESSION['panier']['quantity'][$i]."</td>";
-                echo "<td>".$_SESSION['panier']['price'][$i]."€</td>";
-                echo "<td><a href=\"panier.php?action=add_quantity&amp;id=".$_SESSION['panier']['id'][$i]."\">+1</a></td>";
+
+                /*echo "<td><a href=\"panier.php?action=add_quantity&amp;id=".$_SESSION['panier']['id'][$i]."\">+1</a></td>";
                 echo "<td><a href=\"panier.php?action=remove_quantity&amp;id=".$_SESSION['panier']['id'][$i]."\">-1</a></td>";
                 echo "<td><a href=\"panier.php?action=delete&amp;id=".$_SESSION['panier']['id'][$i]."\">Supprimer du panier</a></td>";
-                echo "</tr>";
+                echo "</tr>";*/
+                feature_normal($_SESSION['panier']['name'][$i],"../Assets/BDD_Images/".$_SESSION['panier']['photo'][$i],$_SESSION['panier']['price'][$i]);
             }
 
             echo "<td colspan=\"2\">";

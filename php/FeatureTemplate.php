@@ -1,12 +1,13 @@
 <?php
     echo "<link rel='stylesheet' type='text/css' href='../Css/FeatureStyleSheet.css'>";
+    require '../../../config.php';
 
 /**
  * @param $category
  * @param $priority_level
  */
 function display_item($category, $priority_level) {
-        require '../../../config.php';
+
         $db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS );
         $database = "amazonece";
         $db_found = mysqli_select_db( $db_handle, $database );
