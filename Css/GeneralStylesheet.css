@@ -23,7 +23,8 @@ main {
     justify-content: center;
     height: 100%;
 
-    /*background-image: url("../Assets/WebSiteResources/images/leather_bg.jpg");*/
+    background-image: url("../Assets/WebSiteResources/images/wood_bg.jpg");
+    background-color: rgba(0,0,0,0.3);
 }
 
 .main_wrapper {
@@ -39,6 +40,7 @@ main {
 .item_section_vertical {
     display: flex;
     flex-direction: column;
+    padding: 0 10%;
 }
 .title_section {
     color: var(--main-gray);
@@ -105,7 +107,7 @@ input[type=submit]:hover {
 }
 
 .horizontal_separator_item {
-    margin: 25px 0;
+    margin: 25px 7%;
 }
 
 .important_text { font-style: italic; color: var(--second-color); }
