@@ -20,9 +20,9 @@
                     <img class="cover" src="../Assets/WebSiteResources/images/books_image.jpg">
                 </a>
                 <section class="section_side">
-                    <a href="#">Vente Flash</a>
-                    <a href="#">Top des Ventes</a>
-                    <a href="#">Notre Selection</a>
+                    <a href="Livres.php#vente_flash">Vente Flash</a>
+                    <a href="Livres.php#top_vente">Top des Ventes</a>
+                    <a href="Livres.php#notre_selection">Notre Selection</a>
                 </section>
             </div>
             <div class="cat_item" id="cat_item_2">
