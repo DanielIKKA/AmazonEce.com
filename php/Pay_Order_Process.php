@@ -1,9 +1,9 @@
 <?php
-    session_start();
     include "Fonctions_panier.php";
-    include "Fonctions_Commande.php";
     $info_bank = false;
     $info_perso = false;
+    $bank_match = false;
+    $id_last_purchase = 0;
 
     if(isset($_POST['surname']) AND isset($_POST['firstname']) AND isset($_POST['adress']) AND isset($_POST['city'])and isset($_POST['country']) and isset($_POST['postal_code'])AND isset($_POST['tel']))
     {
@@ -30,8 +30,8 @@
         $price = total_price();
 
         $type = $_POST['type'];
-        $number = $_POST['number'];
-        $name = $_POST['name'];
+        $card_number = $_POST['number'];
+        $name_on_card = $_POST['name'];
         $expiracy_date = $_POST['expiracy_date'];
         $security_code = $_POST['security_code'];
 
@@ -41,7 +41,8 @@
 
         if($db_found)
         {
-           $SQL = "INSERT INTO adress(street,city,country,postal_code) VALUES(\"".$street."\",\"".$city."\",\"".country."\",\"".$postal_code."\")";
+
+           $SQL = "INSERT INTO adress(street,city,country,postal_code) VALUES(\"".$street."\",\"".$city."\",\"".$country."\",\"".$postal_code."\")";
            mysqli_query($db_handle, $SQL);
 
             $SQL ="SELECT MAX(id) FROM adress";
@@ -54,24 +55,15 @@
                 }
             }
 
-            $SQL ="UPDATE `user` SET `adress_id` = \"".$id_last_adress."\" WHERE `user`.`email` = \"".$_SESSION['email']."\"";
-            mysqli_query($db_handle,$SQL);
 
-            $SQL ="SELECT * from payment_info WHERE number=\"" . $number. "\"";
+            $SQL ="SELECT * from payment_info WHERE number=\"" . $card_number. "\"";
             $result = mysqli_query($db_handle, $SQL);
 
             while ($db_field = mysqli_fetch_assoc($result))
             {
-
-                if($db_field['type'] == $type and $db_field['name'] == $name and $db_field['expiracy_date'] == $expiracy_date and $db_field['security_code'] == $security_code)
+                if($db_field['type'] == $type and $db_field['name'] == $name_on_card and $db_field['expiracy_date'] == $expiracy_date and $db_field['security_code'] == $security_code)
                 {
-                    $seller_email = $_SESSION['user']['email'];
-                    //Il faut enlever de la table item les objets achetés à ce moment là
-                    $SQL ="INSERT INTO  purchase(seller_email,card_number,adress_id,city,postal_code,contact_number,country,surname,firstname,item_id_list,price) VALUES(\"" . $seller_email ."\",\"" . $number ."\",\"" . $id_last_adress ."\",\"" . $city ."\",\"" . $postal_code ."\",\"" . $tel ."\",\"" . $country ."\",\"" . $surname ."\",\"" . $firstname ."\",\"" . $item_id_list ."\",\"" . $price ."\")";
-                    if(mysqli_query($db_handle, $SQL))
-                    {
-                        clear_cart();
-                    }
+                    $bank_match=true;
                 }
                 else
                 {
@@ -79,16 +71,13 @@
                 }
             }
 
-            $SQL ="SELECT MAX(id) FROM purchase";
-            $result = mysqli_query($db_handle, $SQL);
-            if($result)
+            if($bank_match)
             {
-                while($db_field = mysqli_fetch_row($result))
-                {
-                    $id_last_purchase = $db_field[0];
-                }
-                total_display($id_last_purchase);
+                $buyer_email = $_SESSION['user']['email'];
+                $SQL ="INSERT INTO purchase(buyer_email,card_number,adress_id,item_id_list,price) VALUES(\"" . $buyer_email ."\",\"" . $card_number ."\",\"" . $id_last_adress ."\",\"" . $item_id_list ."\",\"" . $price ."\")";
+                mysqli_query($db_handle, $SQL);
             }
         }
+
     }
 
