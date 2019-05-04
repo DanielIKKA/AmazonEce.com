@@ -42,8 +42,6 @@
 
         set_background();
         echo
-
-
             '<!-- header -->
             <header id="wrapper" class="border">
                 <div id="top_header">
