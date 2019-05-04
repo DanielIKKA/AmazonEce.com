@@ -91,19 +91,15 @@ main {
 }
 
 .input_btn {
-    color: var(--second-color);
     background-color: white;
     border-color: #A3106D;
 }
-.input_btn:hover {
-    background-color: var(--second-color);
-    color: white;
-}
 
-input[type=submit]:hover {
-    background-color: var(--main-color);
-    color: white;
-}
+.blue {color: var(--main-color); background-color: white;}
+.blue:hover { background-color: var(--main-color); color: white;}
+
+.pink {color: var(--second-color); background-color: white;}
+.pink:hover { background-color: var(--second-color); color: white; }
 
 .horizontal_separator_item {
     margin: 25px 7%;

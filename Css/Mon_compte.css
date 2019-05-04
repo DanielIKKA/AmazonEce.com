@@ -22,3 +22,9 @@
     align-self: center;
     margin: 5px 10px;
 }
+
+#email_line {
+    display: flex;
+    flex-direction: row;
+}
+

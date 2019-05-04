@@ -94,7 +94,11 @@
                         <div id='infos_1'>
                             <p class='bold_text'>Nom: <span class='normal_text'>$surname</span></p>
                             <p class='bold_text'>Prénom: <span class='normal_text'>$firstname</span></p>
-                            <p class='bold_text'>E-mail: <span class='normal_text'>$email_user</span></p>
+                            <div id='email_line'>
+                                <p class='bold_text'>E-mail: <span class='normal_text'>$email_user</span></p>
+                                <p class='bold_text'>Mot de passe: </p>
+                                <a class='input_btn'> Modifier </a>
+                            </div>
                         </div>
                     </div>";
 
