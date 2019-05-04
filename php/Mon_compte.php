@@ -6,7 +6,7 @@
     <title> ECEamazon.com </title>
     <?php include ("headerTemplate.php");
           include "FeatureTemplate.php"; ?>
-    <link rel="stylesheet" type="text/css" href="../Css/Mon_compte.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../Css/Mon_compte.css">
 </head>
 <body>
     <!-- import the header template -->
@@ -97,9 +97,14 @@
                             <div id='email_line'>
                                 <p class='bold_text'>E-mail: <span class='normal_text'>$email_user</span></p>
                                 <p class='bold_text'>Mot de passe: </p>
-                                <a class='input_btn'> Modifier </a>
-                            </div>
-                        </div>
+                                <a class='input_btn blue'>Modifier</a>
+                            </div>";
+                            if($adress_set) {
+                                    echo "<p class='bold_text'>Adresse: <span class='normal_text'>$street $city $postal_code $country</span></p>";
+                            } else {
+                                echo "<a class='input_btn blue'>ajouter</a>";
+                            }
+                echo"   </div>
                     </div>";
 
                 if($adress_set) {

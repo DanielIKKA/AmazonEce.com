@@ -46,7 +46,7 @@
                 <hr class="horizontal_separator_item"/>
 
                 <section class="item_section_vertical" id="adress_section">
-                    <h1 class="title_section">Coordonnées<span class="important_text">*</span></h1>
+                    <h1 class="title_section">Coordonnées</h1>
                     <input class="input_text field_margin" type="text" name="street" id="street" placeholder="adresse">
                     <div class="field_margin" id="adress_group">
                         <input class="input_text" type="number" name="postal_code" id="postal_code" placeholder="code postal">
@@ -76,7 +76,7 @@
                            placeholder="titulaire de la carte">
                 </section>
 
-                <input type="submit" value="Créer mon compte"/>
+                <input class="input_btn blue" type="submit" value="Créer mon compte"/>
             </form>
         </div>
     </div>
