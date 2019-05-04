@@ -19,8 +19,8 @@
             <form id="form_wrapper" method="post" action="traitement_connexion.php">
                 <input class="input_text" id="email" type="text" name="email" placeholder="e-mail">
                 <input class="input_text" id="password" type="password" name="password" placeholder="mot de passe">
-                <input type="submit" value="Connexion"/>
-                <a class="input_btn" href="inscription.php">Créer un compte</a>
+                <input class="blue btn_margin" type="submit" value="Connexion"/>
+                <a class="input_btn btn_margin pink" href="inscription.php">Créer un compte</a>
             </form>
         </div>
     </div>

@@ -30,6 +30,10 @@
     font-size: 1.1em;
 }
 
+.input_btn, input[type=submit] {
+    margin: 5px 33%;
+}
+
 #identity_group { display: flex; flex-direction: row; justify-content: space-between; }
 #surname { flex: 1; margin-right: 5px; }
 #firstname { flex: 1; margin-left: 5px; }
