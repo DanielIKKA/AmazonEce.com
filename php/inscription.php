@@ -76,7 +76,7 @@
                            placeholder="titulaire de la carte">
                 </section>
 
-                <input class="input_btn blue" type="submit" value="Créer mon compte"/>
+                <input class="input_btn blue btn_margin" type="submit" value="Créer mon compte"/>
             </form>
         </div>
     </div>
