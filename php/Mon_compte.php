@@ -89,6 +89,7 @@ else{
     //fonction pour ajouter des infos
 }
 echo "<form method='post' action=''><input type='submit' value='Modifier'></form>";
+echo "<form method='post' action='connexion.php'><input type='submit' value='Deconnexion'></form>";
 ?>
 </section>
 

@@ -20,7 +20,6 @@
         switch ($action)
         {
             Case "add" :
-                require '../../../config.php';
                 $db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS );
                 $database = "amazonece";
                 $db_found = mysqli_select_db( $db_handle, $database );
@@ -35,7 +34,7 @@
                             $price = $db_field['price'];
                             $name = $db_field['name'];
                             $description = $db_field['description'];
-                            $photo = $db_field['pic1    '];
+                            $photo = $db_field['pic1'];
 
                         }
                     }else echo $SQL;
@@ -56,20 +55,9 @@
 
     ?>
 
-<table width="1000">
-    <tr>
-        <td>Votre panier</td>
-    </tr>
-    <tr>
-        <th>Nom du produit</th>
-        <th>Photo</th>
-        <th>Description</th>
-        <th>Quantité</th>
-        <th>Prix Unitaire</th>
-        <th>Action</th>
-    </tr>
-
     <?php
+    echo "<section class='item_section_vertical'></section>";
+    echo "<h1 class='title_section'>Votre Panier</h1>";
     if(creation_panier())
     {
         $nbArticles=count($_SESSION['panier']['id']);
@@ -79,16 +67,12 @@
         {
             for ($i=0 ;$i < $nbArticles ; $i++)
             {
-
-                /*echo "<td><a href=\"panier.php?action=add_quantity&amp;id=".$_SESSION['panier']['id'][$i]."\">+1</a></td>";
-                echo "<td><a href=\"panier.php?action=remove_quantity&amp;id=".$_SESSION['panier']['id'][$i]."\">-1</a></td>";
-                echo "<td><a href=\"panier.php?action=delete&amp;id=".$_SESSION['panier']['id'][$i]."\">Supprimer du panier</a></td>";
-                echo "</tr>";*/
                 feature_normal($_SESSION['panier']['name'][$i],"../Assets/BDD_Images/".$_SESSION['panier']['photo'][$i],$_SESSION['panier']['price'][$i]);
+                echo $_SESSION['panier']['quantity'][$i];
             }
 
-            echo "<td colspan=\"2\">";
-            echo "<br/>Total : ".total_price()."€";
+            echo "<hr class='horizontal_separator_item'/>";
+            echo "<h1 class='title_section'>Total : ".total_price()."€<h1/>";
             echo "<form method=\"post\" action=\"Payment_Form.php\" enctype=\"multipart/form-data\">
                     <input type=\"submit\" value=\"Passer la commande\"/>
                   </form>";
@@ -96,4 +80,3 @@
         }
     }
     ?>
-</table>

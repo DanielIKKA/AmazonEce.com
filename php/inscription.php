@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -28,6 +29,7 @@
                         <input class="input_text" type="text" name="firstname" id="firstname" placeholder="prénom">
                     </div>
                     <input class="input_text field_margin" type="email" name="email" id="email" placeholder="e-mail">
+                    <input class="input_text field_margin" type="tel" name="tel" id="tel" placeholder="téléphone">
                     <input class="input_text field_margin" type="password" name="password" id="password" placeholder="mot de passe">
                     <input class="input_text field_margin" type="password" name="password_confirm" id="password_confirm"
                                placeholder="confirmation">
@@ -51,9 +53,8 @@
                     <div class="field_margin" id="adress_group">
                         <input class="input_text" type="number" name="postal_code" id="postal_code" placeholder="code postal">
                         <input class="input_text" type="text" name="city" id="city" placeholder="ville">
-                        <input class="input_text" type="text" name="country" id="country" placeholder="pays">
+                        <?php include "Country_list.php";?>
                     </div>
-                    <input class="input_text field_margin" type="tel" name="tel" id="tel" placeholder="téléphone">
                 </section>
 
                 <hr class="horizontal_separator_item"/>
