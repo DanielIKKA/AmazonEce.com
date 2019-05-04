@@ -68,7 +68,8 @@ function display_svg() {
     <meta charset="UTF-8">
     <title> ECEamazon.com </title>
     <?php include ("headerTemplate.php");
-          include "FeatureTemplate.php"; ?>
+          include "FeatureTemplate.php";
+          include "Fonctions_Commande.php";?>
     <link rel="stylesheet" type="text/css" media="screen" href="../Css/Mon_compteStylesheet.css">
 </head>
 <body>
@@ -174,7 +175,7 @@ function display_svg() {
                     $SQL ="SELECT * FROM purchase WHERE purchase.buyer_email=\"".$_SESSION['user']['email']."\"";
                     $result = mysqli_query($db_handle,$SQL);
                     while($db_field = mysqli_fetch_assoc($result)) {
-                        //fonction d'affichage de commande
+                        partial_display($db_field['ID']);
                     }
                 }
                 echo "</section>";

@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    require '../../../config.php';
     include "Fonctions_panier.php";
     $info_bank = false;
     $info_perso = false;
@@ -76,7 +78,12 @@
                 $buyer_email = $_SESSION['user']['email'];
                 $SQL ="INSERT INTO purchase(buyer_email,card_number,adress_id,item_id_list,price) VALUES(\"" . $buyer_email ."\",\"" . $card_number ."\",\"" . $id_last_adress ."\",\"" . $item_id_list ."\",\"" . $price ."\")";
                 mysqli_query($db_handle, $SQL);
+                header("Location:Commande.php");
+                clear_cart();
+                exit;
             }
+
+
         }
 
     }

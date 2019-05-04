@@ -48,7 +48,7 @@ if($db_found)
 }
 
 echo "
-    <form method=\"post\" action=\"Commande.php\">
+    <form method=\"post\" action=\"Pay_Order_Process.php\">
     <section class='item_section_vertical'>
         <h1 class='title_section'>Informations générales</h1>
              <label for=\"surname\">Nom </label><input type=\"text\" name=\"surname\" id=\"surname\" value='".$_SESSION['user']['surname']."'><br/>
