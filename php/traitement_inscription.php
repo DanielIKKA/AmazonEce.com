@@ -110,7 +110,7 @@
 
                 if(mysqli_query($db_handle, $SQL))
                 {
-                    echo "<h1 class=\"sign_in_title\">Inscription réussie</h1>";
+                    echo "<h1 class='sign_in_title'>Inscription réussie</h1>";
                     $_SESSION['user']= array();
                     $_SESSION['user']['email'] = $email;
                     $_SESSION['user']['type'] = $user_type;

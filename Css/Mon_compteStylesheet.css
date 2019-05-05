@@ -35,9 +35,21 @@
 .line_item {
     margin-right: 20px;
 }
+
 #infos_1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin-left: 20px;
+}
+
+#btn_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#btn_deconnection {
+    margin-top: 10px;
 }

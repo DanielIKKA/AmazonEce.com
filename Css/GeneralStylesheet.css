@@ -30,8 +30,10 @@ main {
     display: flex;
     flex-direction: column;
     margin: 20px 7%;
+    padding: 20px 0;
 
     background-color: white;
+    border: solid rgba(128,128,128,0.7) 1px;
     font-family: var(--font-main);
     font-weight: 100;
 }
