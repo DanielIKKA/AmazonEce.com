@@ -1,3 +1,7 @@
+textarea {
+    height: 100px ;
+}
+
 .sign_in {
     display: flex;
     flex-direction: column;

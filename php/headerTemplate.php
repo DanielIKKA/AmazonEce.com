@@ -66,7 +66,7 @@
                         </div>';
                     if($_SESSION['user']['type'] == "seller" || $_SESSION['user']['type'] == "admin") {
                         echo "
-                            <a class='input_btn pink item_section_vertical btn_margin' href='Sell_Item_Form.php'>+ article</a>";
+                            <a class='input_btn pink item_section_vertical' href='Sell_Item_Form.php'>+article</a>";
                     }
         echo'       </div>
             
