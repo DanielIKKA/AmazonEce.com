@@ -90,8 +90,8 @@ function feature_normal($id, $name , $pic1, $price) {
 }
 
 function feature_flash($id, $name , $pic1, $price) {
-    $price = $price."€";
     $reduc = ($price*0.8)."€";
+    $price = $price."€";
     echo "
         <div id='wrapper_template'>      
             <div class='wrapper_feature'>

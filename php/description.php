@@ -123,8 +123,9 @@ function display_svg_title($cat) {
             $name = $fetch_item['name'];
             $author = $fetch_item['author'];
             $description = $fetch_item['description'];
+            $reduc = ($fetch_item['price']*0.8)."€";
             $price = $fetch_item['price']."€";
-            $reduc = ($price*0.8)."€";
+
             echo "
                     <img class='contain pic' src='$url1'>
                     <div id='info_wrapper'>
