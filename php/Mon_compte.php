@@ -1,8 +1,8 @@
 <?php session_start();
 
+// functions declaration and implementation
 function display_svg() {
-    echo $_SESSION['user']['type'];
-    if($_SESSION['user']['type'] = "admin") {
+    if($_SESSION['user']['type'] == "admin") {
         echo'<svg class="svg_title" width="563px" height="64px" viewBox="0 0 563 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
                 <title>Title</title>
@@ -21,7 +21,7 @@ function display_svg() {
                     </g>
                 </g>
             </svg>';
-    } else if($_SESSION['user']['type'] = "buyer") {
+    } else if ($_SESSION['user']['type'] == "buyer") {
         echo'<svg class="svg_title" width="601px" height="64px" viewBox="0 0 601 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
             <title>Title</title>
@@ -40,8 +40,8 @@ function display_svg() {
                 </g>
             </g>
         </svg>';
-    } else if($_SESSION['user']['type'] = 'seller') {
-        echo'<svg width="601px" height="64px" viewBox="0 0 601 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    } else if($_SESSION['user']['type'] == 'seller') {
+        echo'<svg class="svg_title" width="601px" height="64px" viewBox="0 0 601 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
                 <title>Title</title>
                 <desc>Created with Sketch.</desc>
@@ -49,7 +49,7 @@ function display_svg() {
                     <g transform="translate(11.000000, 0.000000)">
                         <text id="Mon-Compte-(Vendeur)" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="50" font-weight="300" fill="#505050">
                             <tspan x="91" y="48">Mon Compte (</tspan>
-                            <tspan x="400.65" y="48" font-family="HelveticaNeue-UltraLightItalic, Helvetica Neue" font-style="italic" font-weight="200">Vendeur</tspan>
+                            <tspan x="400.65" y="48" font-family="HelveticaNeue-UltraLightItalic, Helvetica Neue" font-style="italic" font-weight="200">vendeur</tspan>
                             <tspan x="566.4" y="48">)</tspan>
                         </text>
                         <path d="M105.5,61 L362.824791,61" id="Line" stroke="#505050" stroke-linecap="square"></path>
@@ -60,6 +60,38 @@ function display_svg() {
                 </g>
             </svg>';
     }
+}
+function display_purchase() {
+    echo "<hr class=\"horizontal_separator_item\"/>";
+    echo "<section class=item_section_vertical>";
+    echo "<h1 class='title_section'>Mes commandes</h1>";
+    echo "<div class='features_scroll'>";
+    display_commands($_SESSION['user']['email']);
+    echo "</div>";
+    echo "</section>";
+}
+function display_seller() {
+    display_purchase();
+}
+function display_admin() {
+
+    display_purchase();
+    echo "<hr class=\"horizontal_separator_item\"/>";
+    echo "<section class=item_section_vertical>";
+    echo "<h1 class='title_section important_text'>Administrateur</h1>";
+    echo "<div class='line_wrapper'>
+                <p class='line_item bold_text'>Liste des utilisateur:</p>
+                <a class='input_btn blue' href='Display_all_users.php'>Gérer</a>
+          </div>
+          <div class='line_wrapper'>
+                <p class='line_item bold_text'>Liste des articles mis en vente:</p>
+                <a class='input_btn pink' href='Display_all_items.php'>Gérer</a>
+          </div>";
+    echo "";
+    echo "</section>";
+}
+function display_buyer() {
+    display_purchase();
 }
 ?>
 <!DOCTYPE html>
@@ -81,7 +113,9 @@ function display_svg() {
                 <?php display_svg(); ?>
             </div>
 
+
             <?php
+            //requests SQL to find informations
             $db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS );
             $database = "amazonece";
             $db_found = mysqli_select_db( $db_handle, $database );
@@ -145,7 +179,7 @@ function display_svg() {
                                 <p class='line_item bold_text'>Mot de passe: <span class='normal_text'>******</span></p>                            
                             </div>";
                             if($adress_set) {
-                                echo "<p class='bold_text'>Adresse: <span class='normal_text'>$street $city $postal_code $country</span></p>";
+                                echo "<p class='bold_text'>Adresse: <span class='normal_text'>$street, $postal_code $city, $country</span></p>";
                             }
                             if($bank_set) {
                                 echo "<div class='line_wrapper'>
@@ -155,49 +189,14 @@ function display_svg() {
                                       </div> 
                                       <p class='bold_text'>Titulaire de la carte: <span class='normal_text'>$name_on_card</span></p>";
                             }
-                echo"    
+                echo "    
                         </div>
-                        <a class='input_btn blue' id='btn_modifier'>Modifier</a>
+                        <div id='btn_items'><a class='input_btn blue' id='btn_modifier'>Modifier</a>
+                        <a class='input_btn pink' id='btn_deconnection'>Déconnection</a></div>                      
                     </div>"; ?>
             </section>
 
             <?php
-            function display_purchase() {
-                echo "<hr class=\"horizontal_separator_item\"/>";
-                echo "<section class=item_section_vertical>";
-                echo "<h1 class='title_section'>Mes commandes</h1>";
-                $db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS );
-                $database = "amazonece";
-                $db_found = mysqli_select_db( $db_handle, $database );
-
-                if($db_found) {
-                    $SQL ="SELECT * FROM purchase WHERE purchase.buyer_email=\"".$_SESSION['user']['email']."\"";
-                    $result = mysqli_query($db_handle,$SQL);
-                    while($db_field = mysqli_fetch_assoc($result)) {
-                        //fonction d'affichage de commande
-                    }
-                }
-                echo "</section>";
-            }
-
-            function display_seller()
-            {
-
-            }
-
-
-            function display_admin() {
-
-                display_purchase();
-                echo "<hr class=\"horizontal_separator_item\"/>";
-                echo "<section class=item_section_vertical>";
-                echo "<h1 class='title_section'>Administrateur</h1>";
-                echo "<form method='post' action='Display_all_items.php'><input type='submit' value='Gestion des articles'></form>";
-                echo "<form method='post' action='Display_all_users.php'><input type='submit' value='Gestion des utilisateurs'></form>";
-                echo "</section>";
-            }
-
-
             if(isset($_SESSION['user']['type'])) {
                 switch ($_SESSION['user']['type']) {
                     Case "admin":
@@ -205,6 +204,9 @@ function display_svg() {
                         break;
                     Case "seller":
                         display_seller();
+                        break;
+                    Case "buyer":
+                        display_buyer();
                         break;
                 }
             } ?>
