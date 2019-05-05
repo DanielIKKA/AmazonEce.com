@@ -32,16 +32,30 @@ function display_commands($user) {
     $database = "amazonece";
     $db_found = mysqli_select_db( $db_handle, $database );
 
+
     if($db_found) {
-        $querry = "SELECT * FROM `purchase` WHERE `buyer_email` ="."'".$user."'";
+        $querry = "SELECT * FROM purchase WHERE purchase.buyer_email ="."'".$user."'";
         $result = mysqli_query($db_handle,$querry);
         if($result and $fetch = mysqli_fetch_assoc($result)) {
-            $pic = explode("_",$fetch['item_id_list']);
-            feature_command($fetch['ID'], "../Assets/BDD_Images/".$pic[0]."_1.png", count($fetch['ID'])+1, $fetch['price']);
+            $id_items = explode("_",$fetch['item_id_list']);
+
+            $SQL = "SELECT * FROM item WHERE item.id=\"".$id_items[0]."\"";
+            $result2 = mysqli_query($db_handle,$SQL);
+            while($db_field = mysqli_fetch_assoc($result2))
+            {
+                $pic = $db_field['pic1'];
+            }
+            feature_command($fetch['ID'], "../Assets/BDD_Images/".$pic, count($id_items), $fetch['price']);
             while ($fetch = mysqli_fetch_assoc($result))
             {
-                $pic = explode("_",$fetch['item_id_list']);
-                feature_command($fetch['ID'], "../Assets/BDD_Images/".$pic[0]."_1.png", count($fetch['ID'])+1, $fetch['price']);
+                $id_items = explode("_",$fetch['item_id_list']);
+                $SQL = "SELECT * FROM item WHERE item.id=\"".$id_items[0]."\"";
+                $result2 = mysqli_query($db_handle,$SQL);
+                while($db_field = mysqli_fetch_assoc($result2))
+                {
+                    $pic = $db_field['pic1'];
+                }
+                feature_command($fetch['ID'], "../Assets/BDD_Images/".$pic, count($id_items), $fetch['price']);
             }
         } else {
             echo "<h1 class='title_section important_text'>Vous n'avez pas passé de commande le moment</h1>";
@@ -82,7 +96,7 @@ function feature_command($id , $pic1, $number_of_articles, $price) {
         echo "
         <div id='wrapper_template'>
             <div class='wrapper_feature'>
-                <a class='rect_hover' href='#'>
+                <a class='rect_hover' href='Commande.php?id=".$id."'>
                     <h1>Détails</h1>
                 </a>";
 

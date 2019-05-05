@@ -114,7 +114,7 @@ if($card_number==null)
         <label for=\"name\">Nom sur la carte </label><input type=\"text\" name=\"name\" id=\"name\" value='".$name_on_card."'><br/>
         <label for=\"expiracy_date\">Date d'expiration </label><input type=\"date\" name=\"expiracy_date\" id=\"expiracy_date\" value='".$expiracy_date."'><br/>
         <label for=\"security_code\">Code de sécurité</label><input type=\"text\" name=\"security_code\" id=\"security_code\" value='".$security_code."'><br/><br/>
-        <input type=\"submit\" value=\"Passer la commande\">
+        <input class='input_btn blue' type=\"submit\" value=\"Passer la commande\">
 </section>
 <hr class='horizontal_separator_item'/>
     ";

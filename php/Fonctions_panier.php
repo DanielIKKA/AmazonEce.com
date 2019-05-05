@@ -120,7 +120,10 @@
         $nbArticles=count($_SESSION['panier']['id']);
         for ($i=0 ;$i < $nbArticles ; $i++)
         {
-            $item_id_list = $item_id_list . "_".$_SESSION['panier']['id'][$i];
+            if($i == $nbArticles-1)
+                $item_id_list = $item_id_list .$_SESSION['panier']['id'][$i];
+            else
+                $item_id_list = $item_id_list .$_SESSION['panier']['id'][$i] . "_";
         }
         return $item_id_list;
     }

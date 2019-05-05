@@ -68,13 +68,12 @@
             for ($i=0 ;$i < $nbArticles ; $i++)
             {
                 feature_normal($_SESSION['panier']['name'][$i],"../Assets/BDD_Images/".$_SESSION['panier']['photo'][$i],$_SESSION['panier']['price'][$i]);
-                echo $_SESSION['panier']['quantity'][$i];
             }
 
             echo "<hr class='horizontal_separator_item'/>";
             echo "<h1 class='title_section'>Total : ".total_price()."€<h1/>";
             echo "<form method=\"post\" action=\"Payment_Form.php\" enctype=\"multipart/form-data\">
-                    <input type=\"submit\" value=\"Passer la commande\"/>
+                    <input class='input_btn blue' type='submit' value=\"Passer la commande\"/>
                   </form>";
             echo "</td></tr>";
         }
