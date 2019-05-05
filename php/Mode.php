@@ -63,6 +63,17 @@
                 ?>
             </div>
         </section>
+
+        <hr class="horizontal_separator_item"/>
+
+        <section class="item_section_vertical" id="notre_selection">
+            <h1 class="title_section">Tout</h1>
+            <div class="features_wrap">
+                <?php
+                display_item("Vetements", null);
+                ?>
+            </div>
+        </section>
     </div>
 </main>
 

@@ -1,0 +1,62 @@
+#description_wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    padding: 0 10%;
+}
+
+#info_wrapper {
+    margin: 0 20px;
+    flex: 1;
+}
+
+#price_div {width: 20%;}
+#price_div h1 {align-self: center}
+
+
+#first_line {
+    justify-content: space-between;
+    flex: 1;
+}
+
+.pic {
+    height: 250px;
+    width: 250px;
+}
+
+.title_desc {
+    font-weight: 600;
+    font-size: 2em;
+    color: var(--main-gray);
+    margin: 0 0 5px;
+}
+
+.author {
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--second-gray);
+    margin-top: 0;
+}
+
+.description {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1em;
+    text-align: justify;
+    margin: 0;
+}
+
+.description_title {
+    font-size: 1.2em;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 0 5px;
+}
+
+.price_desc {
+    font-weight: 200;
+    font-size: 2em;
+    color: var(--main-gray);
+    margin: 0 0 5px;
+}

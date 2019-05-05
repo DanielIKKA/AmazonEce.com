@@ -53,12 +53,18 @@
             Case "remove_quantity":
                 remove_quantity($id);
                 break;
+            Case "clear" :
+                clear_cart();
+                break;
         }
     }
 
     ?>
 
     <?php
+    $db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS );
+    $database = "amazonece";
+    $db_found = mysqli_select_db( $db_handle, $database );
     echo "<section class='item_section_vertical'></section>";
     echo "<h1 class='title_section'>Votre Panier</h1>";
     if(creation_panier())
@@ -70,10 +76,26 @@
         {
             for ($i=0 ;$i < $nbArticles ; $i++)
             {
-                feature_normal($_SESSION['panier']['name'][$i],"../Assets/BDD_Images/".$_SESSION['panier']['photo'][$i],$_SESSION['panier']['price'][$i]);
-                echo "<a class='input_btn blue' href='panier.php?action=add&amp;id=".$_SESSION['panier']['id'][$i]."'>Ajouter</a>";
-            }
 
+                $SQL = "Select * from item where item.id=\"".$_SESSION['panier']['id'][$i]."\"";
+                $result = mysqli_query($db_handle,$SQL);
+                if($result) {
+                    while ($db_field = mysqli_fetch_assoc($result)) {
+                        $priority_level = $db_field['priority_level'];
+                    }
+                    if ($priority_level == "VenteFlash")
+                    {
+                        feature_flash($_SESSION['panier']['id'][$i], $_SESSION['panier']['name'][$i], "../Assets/BDD_Images/" . $_SESSION['panier']['photo'][$i], $_SESSION['panier']['price'][$i]);
+                        echo "<a class='input_btn blue' href='panier.php?action=add&amp;id=".$_SESSION['panier']['id'][$i]."'>Ajouter</a>";
+                    }
+                    else
+                    {
+                        feature_normal($_SESSION['panier']['id'][$i], $_SESSION['panier']['name'][$i], "../Assets/BDD_Images/" . $_SESSION['panier']['photo'][$i], $_SESSION['panier']['price'][$i]);
+                        echo "<a class='input_btn blue' href='panier.php?action=add&amp;id=".$_SESSION['panier']['id'][$i]."'>Ajouter</a>";
+                    }
+                }
+            }
+            echo "<a class='input_btn pink' href='panier.php?action=clear&amp;'>";
             echo "<hr class='horizontal_separator_item'/>";
             echo "<h1 class='title_section'>Total : ".total_price()."€<h1/>";
             echo "<form method=\"post\" action=\"Payment_Form.php\" enctype=\"multipart/form-data\">

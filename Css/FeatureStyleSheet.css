@@ -49,6 +49,13 @@
     margin: 0 3%;
 }
 
+.features_wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 3%;
+}
+
 .title_page {
     display: flex;
     flex-direction: row;
