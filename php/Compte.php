@@ -72,10 +72,18 @@ function display_purchase() {
 }
 function display_seller() {
     display_purchase();
+    echo "<hr class=\"horizontal_separator_item\"/>";
+    echo "<section class=item_section_vertical>";
+    echo "<h1 class='title_section'>Mes ventes</h1>";
+    echo "<div class='features_scroll'>";
+    display_sell($_SESSION['user']['email']);
+    echo "</div>";
+    echo "</section>";
+
 }
 function display_admin() {
 
-    display_purchase();
+    display_seller();
     echo "<hr class=\"horizontal_separator_item\"/>";
     echo "<section class=item_section_vertical>";
     echo "<h1 class='title_section important_text'>Administrateur</h1>";

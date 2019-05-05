@@ -78,6 +78,31 @@ function display_commands($user) {
         }
     }
 }
+function display_sell($user) {
+    $db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS );
+    $database = "amazonece";
+    $db_found = mysqli_select_db( $db_handle, $database );
+
+
+    if($db_found) {
+        $querry = "SELECT * FROM item WHERE item.seller_email ="."'".$user."'";
+        $result = mysqli_query($db_handle,$querry);
+        if($result and $fetch = mysqli_fetch_assoc($result))
+        {
+            feature_normal($fetch['id'],$fetch['name'],"../Assets/BDD_Images/" .$fetch['pic1'],$fetch['price']);
+            while ($fetch = mysqli_fetch_assoc($result))
+            {
+                feature_normal($fetch['id'],$fetch['name'],"../Assets/BDD_Images/" .$fetch['pic1'],$fetch['price']);
+            }
+
+        }
+        else
+            {
+            echo "<h1 class='title_section important_text'>Vous n'avez rien vendu</h1>";
+        }
+
+}
+}
 
 /**
  * @param $name

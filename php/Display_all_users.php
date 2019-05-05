@@ -51,7 +51,7 @@
                     }
             echo "</tr>";
         }
-        echo "<form method='post' action='inscription.php'><input type='submit' value='Ajouter un profil'></form>";
+        echo "<form method='post' action='inscription.php'><input class='input_btn blue' type='submit' value='Ajouter un profil'></form>";
     }
     ?>
 </table>

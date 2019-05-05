@@ -124,6 +124,8 @@ if (!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
     echo "Message sent!";
+    //header("Location:Commande.php");
+    exit;
     //Section 2: IMAP
     //Uncomment these to save your message in the 'Sent Mail' folder.
     #if (save_mail($mail)) {
@@ -131,7 +133,11 @@ if (!$mail->send()) {
     #}
 }
 
-header("Location:Commande.php");
-exit;
+
 
 ?>
+
+<script type="javascript">
+    print("hey");
+    window.location.href = "Commande.php";
+</script>

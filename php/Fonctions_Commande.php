@@ -20,7 +20,7 @@
                     $result = mysqli_query($db_handle,$SQL);
                     while($db_field = mysqli_fetch_assoc($result))
                     {
-                        feature_normal($db_field['name'],"../Assets/BDD_Images/".$db_field['pic1'],$db_field['price']);
+                        feature_normal($db_field['id'],$db_field['name'],"../Assets/BDD_Images/".$db_field['pic1'],$db_field['price']);
                     }
                 }
             }
