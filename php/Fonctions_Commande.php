@@ -1,5 +1,5 @@
 <?php
-    include "FeatureTemplate.php";
+
 
     function display_purchase_items($id)
     {
@@ -98,7 +98,34 @@
 
     function partial_display($id)
     {
+        $db_handle = mysqli_connect(DB_SERVER, DB_USER, DB_PASS);
+        $database = "amazonece";
+        $db_found = mysqli_select_db($db_handle, $database);
+        if ($db_found) {
+            $SQL = "SELECT * FROM purchase WHERE purchase.id=\"".$id."\"";
+            $result = mysqli_query($db_handle,$SQL);
+            while($db_field = mysqli_fetch_assoc($result))
+            {
+                $price = $db_field['price'];
+                $item_id_list =$db_field['item_id_list'];
+            }
+        }
 
+        $items = explode("_",$item_id_list);
+        $nb_articles = count($items)-1;
+
+
+        echo " 
+            <div id='wrapper_template'>
+                <div class='wrapper_feature'>
+                    <a class='rect_hover' href='Commande.php?id=".$id."'>
+                        <h1>Voir</h1>
+                    </a>
+                    <h1 class='price_feature'>$nb_articles article(s)</h1>
+                    <h1 class='price_feature'>$price €</h1>            
+                </div>
+                <h1 class='title_feature'>Commande n°".$id."</h1>
+            </div>";
     }
 
     function get_last_purchase()

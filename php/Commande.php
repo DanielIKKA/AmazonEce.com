@@ -6,14 +6,14 @@
         <title>Votre commande</title>
         <?php include ("headerTemplate.php") ;
               include "Fonctions_Commande.php";
-              include "Pay_Order_Process.php"?>
+              include "FeatureTemplate.php"; ?>
     </head>
     <body>
     <!-- import the header template -->
 <?php displayHeader();
-if(isset($_GET['$id']))
+if(isset($_GET['id']))
 {
-    $id=($_GET['$id']);
+    $id=($_GET['id']);
 }else
 {
     $id = get_last_purchase();
@@ -26,10 +26,9 @@ if(isset($_GET['$id']))
     </section>
     <hr class="horizontal_separator_item"/>
     <section class="item_section_vertical">
-        <?php echo "<h1 class=\"title_section\">Total :".total_price() ."€</h1>";
+        <?php echo "<h1 class=\"title_section\">Articles commandés</h1>";
         display_purchase_items($id);?>
     </section>
 
 <?php include "footerTemplate.php";
-      clear_cart();
 

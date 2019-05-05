@@ -70,7 +70,7 @@
             
                     <div id="item3_top" class="item_top">
                         <div id="icons">
-                            <a class="pointer" id="icon_profil" href="Mon_compte.php">
+                            <a class="pointer" id="icon_profil" href="Compte.php">
                                 <img class="contain" src="../Assets/WebSiteResources/header/My_account_icon.png" alt="profil icon">
                                 <p>Mon compte</p>
                             </a>
