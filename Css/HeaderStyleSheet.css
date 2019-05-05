@@ -24,6 +24,7 @@ header {
     flex-direction: column;
     justify-content: center;
     margin-left: 10%;
+    margin-right: 10%;
 }
 #menu_tool_wrapper p {
     margin: 3px 0 0 0;
