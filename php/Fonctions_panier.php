@@ -20,14 +20,6 @@
     {
         if(creation_panier())
         {
-            //si il existe deja on ajoute juste la quantite
-            $position = array_search($id,$_SESSION['panier']['id']);
-            if($position !== false)
-            {
-                $_SESSION['panier']['quantity'][$position] += 1 ;
-            }
-            else
-            {
                 $quantite = 1;
                 //sinon on ajoute le produit
                     array_push( $_SESSION['panier']['photo'],$photo);
@@ -36,8 +28,7 @@
                     array_push( $_SESSION['panier']['id'],$id);
                     array_push( $_SESSION['panier']['price'],$price);
                     array_push( $_SESSION['panier']['quantity'],$quantite);
-                }
-            }
+        }
     }
 
 
@@ -53,6 +44,7 @@
             $tmp['name'] = array();
             $tmp['photo'] = array();
             $tmp['description'] = array();
+            $done = false;
 
             for($i = 0; $i < count($_SESSION['panier']['id']); $i++)
             {
@@ -66,6 +58,12 @@
                     array_push( $tmp['photo'],$_SESSION['panier']['photo'][$i]);
                     array_push( $tmp['description'],$_SESSION['panier']['description'][$i]);
                 }
+                else
+                {
+                    $i=count($_SESSION['panier']['id']);
+                }
+
+
 
             }
 

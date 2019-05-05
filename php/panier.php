@@ -35,10 +35,13 @@
                             $name = $db_field['name'];
                             $description = $db_field['description'];
                             $photo = $db_field['pic1'];
-
+                            $priority_type = $db_field['priority_level'];
                         }
                     }else echo $SQL;
                 }
+                if($priority_type == "VenteFlash")
+                    $price = $price * 0.8;
+
                 add($id,$price,$photo,$description,$name);
                 break;
             Case "delete" :
@@ -68,6 +71,7 @@
             for ($i=0 ;$i < $nbArticles ; $i++)
             {
                 feature_normal($_SESSION['panier']['name'][$i],"../Assets/BDD_Images/".$_SESSION['panier']['photo'][$i],$_SESSION['panier']['price'][$i]);
+                echo "<a class='input_btn blue' href='panier.php?action=add&amp;id=".$_SESSION['panier']['id'][$i]."'>Ajouter</a>";
             }
 
             echo "<hr class='horizontal_separator_item'/>";

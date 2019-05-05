@@ -1,6 +1,13 @@
 <?php
-session_start();
-    include "headerTemplate.php";
+session_start()?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <title> Gestion des articles </title>
+    <?php include ("headerTemplate.php") ; ?>
+</head>
+    <?php "headerTemplate.php";
     displayHeader();
     include "fonctions_admin.php";
     ?>
@@ -61,13 +68,12 @@ session_start();
                                 </select>
                                 <input type='hidden' value='".$db_field['id']."' name='id' id='id'>
                                 <input type='submit' value='Changer'>
-                            </form></td>
+                            </form></td>";
 
-                       <td><a class='input_btn blue' href=\"panier.php?action=add&amp;id=".$db_field['id']."\">Ajouter au panier</a></td>";
+
                    echo"<td><a class='input_btn pink' href=\"Display_all_items.php?action=remove_item&amp;id=".$db_field['id']."\">Supprimer</a></td>
                   </tr>";
         }
-        echo "<form method='post' action='Sell_Item_Form.php'><input type='submit' value='Ajouter un objet'></form>";
     }
     ?>
 </table>
