@@ -29,6 +29,13 @@ if(isset($_GET['id']))
         <?php echo "<h1 class=\"title_section\">Articles commandés</h1>";
         display_purchase_items($id);?>
     </section>
+    <section class="item_section_vertical">
+    <hr class="horizontal_separator_item"/>
+    <form method="post" action="Envoi_mail.php">
+        <input type="hidden" value="<?php $id ?>">
+        <input class="input_btn blue" type="submit" value="Envoyer le récapitulatif par mail">
+    </form>
+    </section>
 
 <?php include "footerTemplate.php";
 
