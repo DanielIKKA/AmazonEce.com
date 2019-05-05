@@ -35,7 +35,7 @@
                             $name = $db_field['name'];
                             $description = $db_field['description'];
                             $photo = $db_field['pic1'];
-                            $priority_type = $db_field['priority_type'];
+                            $priority_type = $db_field['priority_level'];
                         }
                     }else echo $SQL;
                 }

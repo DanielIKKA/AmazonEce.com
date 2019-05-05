@@ -32,7 +32,7 @@ if(isset($_GET['id']))
     <section class="item_section_vertical">
     <hr class="horizontal_separator_item"/>
     <form method="post" action="Envoi_mail.php">
-        <input type="hidden" value="<?php $id ?>">
+        <?php echo "<input type=\"hidden\" value=\"$id\" id='id' name='id'>";?>
         <input class="input_btn blue" type="submit" value="Envoyer le récapitulatif par mail">
     </form>
     </section>
