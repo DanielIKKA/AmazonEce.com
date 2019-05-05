@@ -158,7 +158,11 @@ function display_svg() {
                             }
                 echo"    
                         </div>
-                        <a class='input_btn blue' id='btn_modifier'>Modifier</a>
+                        <form method='post' action='Modifier_user.php'>
+                        <input type='hidden' value='".$email_user."' id='email' name='email' > 
+                        <input type='submit' id='btn_modifier' value='Modifer'></input>
+                        </form>
+                        <a class='input_btn blue' id='btn_modifier' href='connexion.php'>Deconnexion</a>
                     </div>"; ?>
             </section>
 

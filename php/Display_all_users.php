@@ -1,4 +1,5 @@
 <?php
+      session_start();
       include "headerTemplate.php";
       include "fonctions_admin.php";
       displayHeader();?>
@@ -43,6 +44,10 @@
                     if($db_field['type'] != 'admin')
                     {
                         echo "<td><a class='input_btn cover' href=\"Display_all_users.php?action=remove_user&amp;email=".$db_field['email']."\">Supprimer</td>";
+                        echo "<td><form method='post' action='Modifier_user.php'>
+                        <input type='hidden' value='".$db_field['email']."' id='email' name='email' > 
+                        <input type='submit' id='btn_modifier' value='Modifer'></input>
+                        </form></td>";
                     }
             echo "</tr>";
         }
