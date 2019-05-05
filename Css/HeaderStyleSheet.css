@@ -11,7 +11,7 @@ header {
 
 #item2_top { flex: 1; }
 #item3_top { flex: 1.2; justify-content: flex-end;}
-#item1_top { flex: 1.2; }
+#item1_top { flex: 1.2; align-items: center;}
 
 #top_header {
     display: flex;
@@ -23,7 +23,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-left: 10%;
 }
 #menu_tool_wrapper p {
@@ -127,8 +126,14 @@ header {
 .item_top {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 33.3%;
 }
+.add_item {
+    display: flex;
+    margin: 0 20%;
+}
+
 .pointer:hover {
     cursor: pointer;
 }

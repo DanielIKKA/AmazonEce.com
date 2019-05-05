@@ -63,8 +63,12 @@
                                 </g>
                             </svg>
                             <p> menu </p>
-                        </div>
-                    </div>
+                        </div>';
+                    if($_SESSION['user']['type'] == "seller" || $_SESSION['user']['type'] == "admin") {
+                        echo "
+                            <a class='input_btn pink item_section_vertical btn_margin' href='Sell_Item_Form.php'>+ article</a>";
+                    }
+        echo'       </div>
             
                     <div id="item2_top" class="item_top">
                         <a href="Home.php"><img class="contain" src="../Assets/WebSiteResources/header/Logo.png" alt="logo du site"></a>
