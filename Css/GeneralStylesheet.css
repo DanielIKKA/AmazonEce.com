@@ -69,7 +69,7 @@ main {
     align-items: center;
     justify-content: center;
     height: 35px;
-    padding: 0 2%;
+    padding: 0 10%;
     background: none;
 
     -webkit-border-radius: 5px;
@@ -152,4 +152,13 @@ main {
 }
 .rect_hover:hover {
     opacity: 0.7;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-direction: row;
 }

@@ -18,7 +18,7 @@ function display_item($category, $priority_level) {
         if($result) {
             while ($fetch = mysqli_fetch_assoc($result))
             {
-                feature_normal($fetch['name'], "../Assets/BDD_Images/".$fetch['pic1'], $fetch['price']);
+                feature_normal($fetch['id'], $fetch['name'], "../Assets/BDD_Images/".$fetch['pic1'], $fetch['price']);
             }
         }
     }
@@ -63,18 +63,17 @@ function display_commands($user) {
     }
 }
 
-
 /**
  * @param $name
  * @param $pic1
  * @param $price
  */
-function feature_normal($name , $pic1, $price) {
+function feature_normal($id, $name , $pic1, $price) {
     $price = $price."€";
     echo " 
         <div id='wrapper_template'>
             <div class='wrapper_feature'>
-                <a class='rect_hover' href='#'>
+                <a class='rect_hover' href='description.php?id=".$id."'>
                     <h1>Voir</h1>
                 </a>
                 <img class='contain item1' src='$pic1' alt=''>
