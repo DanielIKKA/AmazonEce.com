@@ -71,6 +71,7 @@
             for ($i=0 ;$i < $nbArticles ; $i++)
             {
                 feature_normal($_SESSION['panier']['name'][$i],"../Assets/BDD_Images/".$_SESSION['panier']['photo'][$i],$_SESSION['panier']['price'][$i]);
+                echo "<a class='input_btn blue' href='panier.php?action=add&amp;id=".$_SESSION['panier']['id'][$i]."'>Ajouter</a>";
             }
 
             echo "<hr class='horizontal_separator_item'/>";
