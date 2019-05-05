@@ -18,7 +18,12 @@ function display_item($category, $priority_level) {
         if($result) {
             while ($fetch = mysqli_fetch_assoc($result))
             {
-                feature_normal($fetch['id'], $fetch['name'], "../Assets/BDD_Images/".$fetch['pic1'], $fetch['price']);
+                if($priority_level == "VenteFlash") {
+                    feature_flash($fetch['id'], $fetch['name'], "../Assets/BDD_Images/".$fetch['pic1'], $fetch['price']);
+                } else {
+                    feature_normal($fetch['id'], $fetch['name'], "../Assets/BDD_Images/".$fetch['pic1'], $fetch['price']);
+                }
+
             }
         }
     }
@@ -78,6 +83,23 @@ function feature_normal($id, $name , $pic1, $price) {
                 </a>
                 <img class='contain item1' src='$pic1' alt=''>
                 <h1 class='price_feature'>$price</h1>            
+            </div>
+            <h1 class='title_feature'>$name</h1>
+        </div>";
+
+}
+
+function feature_flash($id, $name , $pic1, $price) {
+    $price = $price."€";
+    $reduc = ($price*0.8)."€";
+    echo "
+        <div id='wrapper_template'>      
+            <div class='wrapper_feature'>
+                <a class='rect_hover' href='description.php?id=".$id."'>
+                    <h1>Voir</h1>
+                </a>
+                <img class='contain item1' src='$pic1' alt=''>
+                <h1 class='price_feature'><span class='rayer'>$price</span><span class='important_text'> $reduc</span></h1>            
             </div>
             <h1 class='title_feature'>$name</h1>
         </div>";

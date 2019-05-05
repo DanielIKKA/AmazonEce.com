@@ -124,6 +124,7 @@ function display_svg_title($cat) {
             $author = $fetch_item['author'];
             $description = $fetch_item['description'];
             $price = $fetch_item['price']."€";
+            $reduc = ($price*0.8)."€";
             echo "
                     <img class='contain pic' src='$url1'>
                     <div id='info_wrapper'>
@@ -134,9 +135,13 @@ function display_svg_title($cat) {
                                     echo" <h2 class='author'>$author</h2>";
                                 }
             echo"           </div>
-                            <div id='price_div' class='column'>
-                                <h1 class='price_desc'>$price</h1>
-                                <a class='input_btn blue' href=\"panier.php?action=add&amp;id=".$id_item."\">Ajouter</a>
+                            <div id='price_div' class='column'>";
+                            if ($fetch_item['priority_level'] == "VenteFlash") {
+                                echo"<h1 class='price_desc'><span class='rayer'>$price</span><span class='important_text'> $reduc</span></h1>";
+                            } else {
+                                echo "<h1 class='price_desc'>$price</h1>";
+                            }
+            echo"           <a class='input_btn blue' href=\"panier.php?action=add&amp;id=".$id_item."\">Ajouter</a>
                             </div>
                         </div>
                         <p class='description_title'>Description: </p>

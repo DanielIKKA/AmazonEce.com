@@ -116,6 +116,7 @@ svg text {
 .important_text { font-style: italic; color: var(--second-color); }
 .bold_text { font-style: normal; color: black; font-weight: 600;}
 .normal_text { font-style: normal; color: var(--main-gray); font-weight: 100;}
+.rayer {text-decoration-line: line-through; color: rgba(128,128,128,0.5)}
 
 .cover {
     width: 100%;
