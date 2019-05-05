@@ -61,9 +61,9 @@ session_start();
                                 </select>
                                 <input type='hidden' value='".$db_field['id']."' name='id' id='id'>
                                 <input type='submit' value='Changer'>
-                            </form></td>
+                            </form></td>";
 
-                       <td><a class='input_btn blue' href=\"panier.php?action=add&amp;id=".$db_field['id']."\">Ajouter au panier</a></td>";
+
                    echo"<td><a class='input_btn pink' href=\"Display_all_items.php?action=remove_item&amp;id=".$db_field['id']."\">Supprimer</a></td>
                   </tr>";
         }
