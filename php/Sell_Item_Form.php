@@ -46,7 +46,7 @@
                 <input class="input_text field_margin" type="text" name="author" id="author" placeholder="Auteur">
 
                 <p class="field_margin">Veuillez ajouter entre 1 et 3 photos du produit et éventuellement une video (inférieure à 50 Mo, Format .avi .mp4)</p>
-                <input type="hidden" name="MAX_FILE_SIZE" value="50000000">
+                <input type="hidden" name="MAX_FILE_SIZE" value="50000000000">
                 <div class="field_margin" id="category_selection">
                     <p class="normal_text">Photo 1 :</p><input type="file" name="pic1">
                     <p class="normal_text">Photo 2 :</p> <input type="file" name="pic2">

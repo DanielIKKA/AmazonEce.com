@@ -64,7 +64,8 @@
                             </svg>
                             <p> menu </p>
                         </div>';
-                    if($_SESSION['user']['type'] == "seller" || $_SESSION['user']['type'] == "admin") {
+
+                    if(isset($_SESSION['user']['type']) and $_SESSION['user']['type'] == "seller" || $_SESSION['user']['type'] == "admin") {
                         echo "
                             <a class='input_btn pink item_section_vertical' href='Sell_Item_Form.php'>+article</a>";
                     }

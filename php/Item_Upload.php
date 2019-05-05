@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include "headerTemplate.php";
     include "Fonctions_Commande.php";
     displayHeader();

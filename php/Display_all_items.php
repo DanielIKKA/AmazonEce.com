@@ -31,11 +31,12 @@ session_start()?>
         change_priority_type($_POST['id'],$_POST['new_priority_level']);
     }
 
+
     if(isset($_GET['action']))
     {
         switch ($_GET['action'])
         {
-            Case "remove_user" :
+            Case "remove_item" :
                 remove_item($_GET['id']);
                 break;
         }
