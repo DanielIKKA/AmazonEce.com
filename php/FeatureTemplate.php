@@ -13,18 +13,29 @@ function display_item($category, $priority_level) {
     $db_found = mysqli_select_db( $db_handle, $database );
 
     if($db_found) {
-        $querry = "SELECT * FROM item WHERE category=\"".$category."\" AND priority_level=\"".$priority_level."\"";
+        if ($priority_level == null) {
+            $querry = "SELECT * FROM item WHERE category=\"".$category."\"";
+        } else {
+            $querry = "SELECT * FROM item WHERE category=\"".$category."\" AND priority_level=\"".$priority_level."\"";
+        }
+
         $result = mysqli_query($db_handle,$querry);
-        if($result) {
+        if($result and $fetch = mysqli_fetch_assoc($result)) {
+            if($fetch['priority_level'] == "VenteFlash") {
+                feature_flash($fetch['id'], $fetch['name'], "../Assets/BDD_Images/".$fetch['pic1'], $fetch['price']);
+            } else {
+                feature_normal($fetch['id'], $fetch['name'], "../Assets/BDD_Images/".$fetch['pic1'], $fetch['price']);
+            }
             while ($fetch = mysqli_fetch_assoc($result))
             {
-                if($priority_level == "VenteFlash") {
+                if($fetch['priority_level'] == "VenteFlash") {
                     feature_flash($fetch['id'], $fetch['name'], "../Assets/BDD_Images/".$fetch['pic1'], $fetch['price']);
                 } else {
                     feature_normal($fetch['id'], $fetch['name'], "../Assets/BDD_Images/".$fetch['pic1'], $fetch['price']);
                 }
-
             }
+        } else {
+            no_item($priority_level);
         }
     }
 }
@@ -132,5 +143,20 @@ function feature_command($id , $pic1, $number_of_articles, $price) {
             <h1 class='title_feature'><span class='bold_text'>no.</span>$id</h1>
         </div>";
 
+}
+
+function no_item($section) {
+    switch ($section) {
+        case "VenteFlash":
+            echo"<h1 class='title_feature center'>Pas de ventes flash pour le moment.</h1>";
+            break;
+        case "NotreSelection":
+            echo"<h1 class='title_feature center'>Pas de selection particulière de notre part pour le moment.</h1>";
+            break;
+        case "TopVente":
+            echo"<h1 class='title_feature center'>Pas de top vente pour le moment.</h1>";
+            break;
+
+    }
 }
 ?>
