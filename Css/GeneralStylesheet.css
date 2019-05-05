@@ -26,6 +26,10 @@ main {
     background-color: rgba(0,0,0,0.3);
 }
 
+svg text {
+    font-family: var(--font-main);
+}
+
 .main_wrapper {
     display: flex;
     flex-direction: column;

@@ -10,6 +10,10 @@
     flex: 1;
 }
 
+#price_div {width: 20%;}
+#price_div h1 {align-self: center}
+
+
 #first_line {
     justify-content: space-between;
     flex: 1;

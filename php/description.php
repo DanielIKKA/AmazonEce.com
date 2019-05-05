@@ -134,7 +134,7 @@ function display_svg_title($cat) {
                                     echo" <h2 class='author'>$author</h2>";
                                 }
             echo"           </div>
-                            <div class='column'>
+                            <div id='price_div' class='column'>
                                 <h1 class='price_desc'>$price</h1>
                                 <a class='input_btn blue' href=\"panier.php?action=add&amp;id=".$id_item."\">Ajouter</a>
                             </div>

@@ -9,7 +9,7 @@ function display_svg() {
                 <desc>Created with Sketch.</desc>
                 <g id="Title" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g transform="translate(12.000000, 0.000000)">
-                        <text id="Mon-Compte-(admin)" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="50" font-weight="300" fill="#505050">
+                        <text id="Mon-Compte-(admin)" font-size="50" font-weight="300" fill="#505050">
                             <tspan x="91" y="48">Mon Compte (</tspan>
                             <tspan x="400.65" y="48" font-family="HelveticaNeue-UltraLightItalic, Helvetica Neue" font-style="italic" font-weight="200">admin</tspan>
                             <tspan x="521.95" y="48">)</tspan>
@@ -192,10 +192,10 @@ function display_buyer() {
                             }
                 echo "    
                         </div>
-                        <form class='btn_items' method='post' action='Modifier_user.php'>
-                        <input type='hidden' value='".$email_user."' id='email' name='email' > 
-                        <input class='input_btn blue' type='submit' id='btn_modifier' value='Modifer'></input>
-                        <a class='input_btn pink' id='btn_modifier' href='connexion.php'>Deconnexion</a>
+                        <form id='btn_items' method='post' action='Modifier_user.php'>
+                            <input type='hidden' value='".$email_user."' id='email' name='email' > 
+                            <input class='input_btn blue' type='submit' id='btn_modifier' value='Modifer'>
+                            <a class='input_btn pink' id='btn_modifier' href='connexion.php'>Deconnexion</a>
                         </form>
                         
                     </div>"; ?>
